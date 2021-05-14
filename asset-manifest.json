@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rcrimp.github.io/raw-comedy-website/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/rcrimp.github.io/raw-comedy-website/static/js/main.1428ce10.chunk.js",
+    "main.js.map": "/rcrimp.github.io/raw-comedy-website/static/js/main.1428ce10.chunk.js.map",
+    "runtime-main.js": "/rcrimp.github.io/raw-comedy-website/static/js/runtime-main.1b6cba49.js",
+    "runtime-main.js.map": "/rcrimp.github.io/raw-comedy-website/static/js/runtime-main.1b6cba49.js.map",
+    "static/js/2.a3799af8.chunk.js": "/rcrimp.github.io/raw-comedy-website/static/js/2.a3799af8.chunk.js",
+    "static/js/2.a3799af8.chunk.js.map": "/rcrimp.github.io/raw-comedy-website/static/js/2.a3799af8.chunk.js.map",
+    "static/js/3.3db120fb.chunk.js": "/rcrimp.github.io/raw-comedy-website/static/js/3.3db120fb.chunk.js",
+    "static/js/3.3db120fb.chunk.js.map": "/rcrimp.github.io/raw-comedy-website/static/js/3.3db120fb.chunk.js.map",
+    "index.html": "/rcrimp.github.io/raw-comedy-website/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/rcrimp.github.io/raw-comedy-website/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.a3799af8.chunk.js.LICENSE.txt": "/rcrimp.github.io/raw-comedy-website/static/js/2.a3799af8.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/rcrimp.github.io/raw-comedy-website/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b6cba49.js",
+    "static/js/2.a3799af8.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.1428ce10.chunk.js"
+  ]
+}
