@@ -90,8 +90,16 @@ const fontFaces = [
 ];
 
 const theme = createMuiTheme({
-  typography: {
-    fontFamily: 'Nexa, Arial',
+	palette: {
+		primary: {
+		  main: "#FFFFFF",
+		},
+		secondary: {
+		  main: "#808080",
+		},
+	  },
+	typography: {
+	fontFamily: 'Nexa, Arial',
 		h1: {
 			fontWeight: 900,
 		},

@@ -18,10 +18,12 @@ import seats6 from "../images/theatre-seats/006.png";
 import seats7 from "../images/theatre-seats/007.png";
 import seats8 from "../images/theatre-seats/008.png";
 
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
 const rawLogoDimendsions = {w: 635, h: 194};
 const curtainDimensions = {w: 1224, h: 857};
 
-const shadowSettings = '0 2px 15px #000000BB'
+const shadowSettings = '0 2px 10px #000000BB'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -39,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%", //rawLogoDimendsions.w,
 		// backgroundColor: "rgba(0, 0, 0, 0.5)",
 		color: "white",
-   	position: "absolute",
+   		position: "absolute",
 		top: 0,
-    bottom: 0,
+    	bottom: 0,
 		left: 0,
 		right: 0,
 		display: "flex",
@@ -77,7 +79,15 @@ const useStyles = makeStyles((theme) => ({
 	seats: {
 		width: "100%",
 		filter: `drop-shadow(0 0 10px #000000BB)`,
-
+	},
+	scrollIcon: {
+		display: "block",
+		marginTop: "100px",
+		marginLeft: "auto",
+		marginRight: "auto",
+		width: "100px",
+		height: "100px",
+		filter: `drop-shadow(${shadowSettings})`,
 	},
 }));
 
@@ -92,6 +102,7 @@ const Title = () => {
 				<Typography className={classes.textTop} variant="h1">LOWER SOUTH ISLAND</Typography>
 				<img className={classes.rawLogo} src={RAWlogo} alt="RAW logo" />
 				<Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography>
+				<KeyboardArrowDownIcon className={classes.scrollIcon}/>
 			</Parallax>
 			{seats.map((row, i) => (
 				<div className={classes.seatsContainer} >
@@ -101,6 +112,7 @@ const Title = () => {
 				</div>
 			))
 			}
+
 
 		</div>
 	);
