@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/reubencrimp.com/raw-comedy-website/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/reubencrimp.com/raw-comedy-website/static/js/main.7dfccbda.chunk.js",
-    "main.js.map": "/reubencrimp.com/raw-comedy-website/static/js/main.7dfccbda.chunk.js.map",
+    "main.css": "/reubencrimp.com/raw-comedy-website/static/css/main.2ae47eeb.chunk.css",
+    "main.js": "/reubencrimp.com/raw-comedy-website/static/js/main.2cf94ce4.chunk.js",
+    "main.js.map": "/reubencrimp.com/raw-comedy-website/static/js/main.2cf94ce4.chunk.js.map",
     "runtime-main.js": "/reubencrimp.com/raw-comedy-website/static/js/runtime-main.786246fb.js",
     "runtime-main.js.map": "/reubencrimp.com/raw-comedy-website/static/js/runtime-main.786246fb.js.map",
     "static/js/2.bc2af763.chunk.js": "/reubencrimp.com/raw-comedy-website/static/js/2.bc2af763.chunk.js",
     "static/js/2.bc2af763.chunk.js.map": "/reubencrimp.com/raw-comedy-website/static/js/2.bc2af763.chunk.js.map",
     "index.html": "/reubencrimp.com/raw-comedy-website/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/reubencrimp.com/raw-comedy-website/static/css/main.6dea0f05.chunk.css.map",
+    "static/css/main.2ae47eeb.chunk.css.map": "/reubencrimp.com/raw-comedy-website/static/css/main.2ae47eeb.chunk.css.map",
     "static/js/2.bc2af763.chunk.js.LICENSE.txt": "/reubencrimp.com/raw-comedy-website/static/js/2.bc2af763.chunk.js.LICENSE.txt",
+    "static/media/001.87fc6e79.png": "/reubencrimp.com/raw-comedy-website/static/media/001.87fc6e79.png",
+    "static/media/002.f1f6c691.png": "/reubencrimp.com/raw-comedy-website/static/media/002.f1f6c691.png",
+    "static/media/003.fb99b125.png": "/reubencrimp.com/raw-comedy-website/static/media/003.fb99b125.png",
+    "static/media/004.254bf5bd.png": "/reubencrimp.com/raw-comedy-website/static/media/004.254bf5bd.png",
+    "static/media/005.8d8c6588.png": "/reubencrimp.com/raw-comedy-website/static/media/005.8d8c6588.png",
+    "static/media/006.9ee39f19.png": "/reubencrimp.com/raw-comedy-website/static/media/006.9ee39f19.png",
+    "static/media/007.b00ac1d0.png": "/reubencrimp.com/raw-comedy-website/static/media/007.b00ac1d0.png",
+    "static/media/008.59777b8f.png": "/reubencrimp.com/raw-comedy-website/static/media/008.59777b8f.png",
     "static/media/RAW.d8ce0a4f.png": "/reubencrimp.com/raw-comedy-website/static/media/RAW.d8ce0a4f.png",
     "static/media/curtain.6937a47e.jpg": "/reubencrimp.com/raw-comedy-website/static/media/curtain.6937a47e.jpg",
     "static/media/nexa-black-webfont.ba7a9a21.woff": "/reubencrimp.com/raw-comedy-website/static/media/nexa-black-webfont.ba7a9a21.woff",
@@ -24,13 +32,12 @@
     "static/media/nexa-light-webfont.dea89112.woff": "/reubencrimp.com/raw-comedy-website/static/media/nexa-light-webfont.dea89112.woff",
     "static/media/nexa-regular-webfont.de61d568.woff2": "/reubencrimp.com/raw-comedy-website/static/media/nexa-regular-webfont.de61d568.woff2",
     "static/media/nexa-regular-webfont.fe86337d.woff": "/reubencrimp.com/raw-comedy-website/static/media/nexa-regular-webfont.fe86337d.woff",
-    "static/media/seats.45b4855b.png": "/reubencrimp.com/raw-comedy-website/static/media/seats.45b4855b.png",
     "static/media/signup.91c41392.jpg": "/reubencrimp.com/raw-comedy-website/static/media/signup.91c41392.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.786246fb.js",
     "static/js/2.bc2af763.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.7dfccbda.chunk.js"
+    "static/css/main.2ae47eeb.chunk.css",
+    "static/js/main.2cf94ce4.chunk.js"
   ]
 }
