@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/raw-comedy-website/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/raw-comedy-website/static/js/main.0a294aec.chunk.js",
-    "main.js.map": "/raw-comedy-website/static/js/main.0a294aec.chunk.js.map",
+    "main.css": "/raw-comedy-website/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/raw-comedy-website/static/js/main.9880d65f.chunk.js",
+    "main.js.map": "/raw-comedy-website/static/js/main.9880d65f.chunk.js.map",
     "runtime-main.js": "/raw-comedy-website/static/js/runtime-main.9d9660c8.js",
     "runtime-main.js.map": "/raw-comedy-website/static/js/runtime-main.9d9660c8.js.map",
-    "static/js/2.980b68f3.chunk.js": "/raw-comedy-website/static/js/2.980b68f3.chunk.js",
-    "static/js/2.980b68f3.chunk.js.map": "/raw-comedy-website/static/js/2.980b68f3.chunk.js.map",
+    "static/js/2.50134ba4.chunk.js": "/raw-comedy-website/static/js/2.50134ba4.chunk.js",
+    "static/js/2.50134ba4.chunk.js.map": "/raw-comedy-website/static/js/2.50134ba4.chunk.js.map",
     "index.html": "/raw-comedy-website/index.html",
-    "static/css/main.2ae47eeb.chunk.css.map": "/raw-comedy-website/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.980b68f3.chunk.js.LICENSE.txt": "/raw-comedy-website/static/js/2.980b68f3.chunk.js.LICENSE.txt",
-    "static/media/001.4623b6c5.png": "/raw-comedy-website/static/media/001.4623b6c5.png",
-    "static/media/002.7adfed75.png": "/raw-comedy-website/static/media/002.7adfed75.png",
+    "static/css/main.6dea0f05.chunk.css.map": "/raw-comedy-website/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.50134ba4.chunk.js.LICENSE.txt": "/raw-comedy-website/static/js/2.50134ba4.chunk.js.LICENSE.txt",
     "static/media/003.974cd6c1.png": "/raw-comedy-website/static/media/003.974cd6c1.png",
     "static/media/004.ee1a2b5d.png": "/raw-comedy-website/static/media/004.ee1a2b5d.png",
     "static/media/005.7e6bf0ce.png": "/raw-comedy-website/static/media/005.7e6bf0ce.png",
@@ -19,7 +17,9 @@
     "static/media/007.7e9c4beb.png": "/raw-comedy-website/static/media/007.7e9c4beb.png",
     "static/media/008.5217e6c9.png": "/raw-comedy-website/static/media/008.5217e6c9.png",
     "static/media/RAW.5985171a.png": "/raw-comedy-website/static/media/RAW.5985171a.png",
+    "static/media/actingAudition.85988771.jpg": "/raw-comedy-website/static/media/actingAudition.85988771.jpg",
     "static/media/curtain.6937a47e.jpg": "/raw-comedy-website/static/media/curtain.6937a47e.jpg",
+    "static/media/md-03-08.f9434183.png": "/raw-comedy-website/static/media/md-03-08.f9434183.png",
     "static/media/nexa-black-webfont.ba7a9a21.woff": "/raw-comedy-website/static/media/nexa-black-webfont.ba7a9a21.woff",
     "static/media/nexa-black-webfont.f4d0c8ac.woff2": "/raw-comedy-website/static/media/nexa-black-webfont.f4d0c8ac.woff2",
     "static/media/nexa-bold-webfont.5f4f5ba9.woff": "/raw-comedy-website/static/media/nexa-bold-webfont.5f4f5ba9.woff",
@@ -31,13 +31,12 @@
     "static/media/nexa-light-webfont.9974f1d3.woff2": "/raw-comedy-website/static/media/nexa-light-webfont.9974f1d3.woff2",
     "static/media/nexa-light-webfont.dea89112.woff": "/raw-comedy-website/static/media/nexa-light-webfont.dea89112.woff",
     "static/media/nexa-regular-webfont.de61d568.woff2": "/raw-comedy-website/static/media/nexa-regular-webfont.de61d568.woff2",
-    "static/media/nexa-regular-webfont.fe86337d.woff": "/raw-comedy-website/static/media/nexa-regular-webfont.fe86337d.woff",
-    "static/media/signup.91c41392.jpg": "/raw-comedy-website/static/media/signup.91c41392.jpg"
+    "static/media/nexa-regular-webfont.fe86337d.woff": "/raw-comedy-website/static/media/nexa-regular-webfont.fe86337d.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.9d9660c8.js",
-    "static/js/2.980b68f3.chunk.js",
-    "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.0a294aec.chunk.js"
+    "static/js/2.50134ba4.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.9880d65f.chunk.js"
   ]
 }
