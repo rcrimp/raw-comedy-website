@@ -21,7 +21,7 @@ import seats8 from "../images/theatre-seats/008.png";
 const rawLogoDimendsions = {w: 635, h: 194};
 const curtainDimensions = {w: 1224, h: 857};
 
-const shadowSettings = '0 2px 10px #000000BB'
+const shadowSettings = '0 2px 15px #000000BB'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -95,7 +95,7 @@ const Title = () => {
 			</Parallax>
 			{seats.map((row, i) => (
 				<div className={classes.seatsContainer} >
-					<Parallax y={[-10 + Math.pow(2, i), -1 * Math.pow(2, i)]} >
+					<Parallax y={[-5 + Math.pow(2, i), -5 + -Math.pow(2, i)]} >
 						<img className={classes.seats} src={row} />
 					</Parallax>
 				</div>
