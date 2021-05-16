@@ -6,6 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 
+import ReactDOM from 'react-dom'
+// import HashLink from 'react-anchor-link-smooth-scroll'
+import { HashLink  } from 'react-router-hash-link';
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -17,6 +22,18 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
     },
+		link: {
+			textDecoration: 'none !important',
+		},
+		buttonContainer: {
+			// width: "400px",
+			display: "flex",
+			flexDirection: "row",
+			justifyContent: "space-between",
+		},
+		button: {
+			// color: '#FFFFFF',
+		}
   }),
 );
 
@@ -25,14 +42,28 @@ const MenuBar = () => {
 
 	return (
 		<div className={classes.root}>
-      <AppBar elevation={0} color={"transparent"} position="fixed">
+      <AppBar elevation={0} color={"transparent"} position="absolute">
         <Toolbar>
-          <Typography color={"primary"} variant="h6" className={classes.title}>
-            RAW
-          </Typography>
-          <Button color="primary">About</Button>
-          <Button color="primary">Tickets</Button>
-          <Button color="primary">Compete</Button>
+          <Typography color={"primary"} variant="h6" className={classes.title}></Typography>
+					
+					<div className={classes.buttonContainer}>
+						{/* <HashLink className={classes.link} smooth to="/raw#home">
+							<Button size='large' className={classes.button} color="primary">^</Button>
+						</HashLink> */}
+						
+						<HashLink className={classes.link} smooth to="/raw#about">
+							<Button size='large' className={classes.button} color="secondary">About</Button>
+						</HashLink>
+						
+						<HashLink className={classes.link} smooth to="/raw#compete">
+							<Button size='large' className={classes.button} color="secondary">Compete</Button>
+						</HashLink>
+						
+						<HashLink className={classes.link} smooth to="/raw#tickets">
+							<Button size='large' className={classes.button} color="secondary">Tickets</Button>
+						</HashLink>
+					</div>
+
         </Toolbar>
       </AppBar>
     </div>

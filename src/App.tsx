@@ -2,39 +2,25 @@ import React from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
-	Route
+	Route,
+	Redirect,
   } from "react-router-dom";
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from "@material-ui/core/styles";
-import { ParallaxProvider } from 'react-scroll-parallax';
-import theme from "./theme";
+	import ReactDOM from 'react-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-import MenuBar from "./components/MenuBar";
-import FullScreenContainer from "./components/FullScreenContainer"
-import Title from "./components/Title";
-import About from "./components/About";
-import Signup from "./components/Signup";
-import Tickets from "./components/Tickets";
+import HomePage from './components/HomePage'
 
 function App() {
+
   return (
-	<Router basename={'/raw-comedy-website'}>
-		<Switch>
-			<Route path={'/'}>
-				<ThemeProvider theme={theme}>
-				<CssBaseline />
-					<ParallaxProvider>
-						<MenuBar />
-						<FullScreenContainer content={<Title />} />
-						<FullScreenContainer content={<About />} />
-						<FullScreenContainer content={<Signup />} />
-						<FullScreenContainer content={<Tickets />} />
-					</ParallaxProvider>
-				</ThemeProvider>
-			</Route>)
-		</Switch>
-	</Router>
+		<Router basename={'/raw-comedy-website'}>
+			<Switch>
+				<Route exact path={'/'} component={HomePage} />
+				<Route exact path={'/raw'} component={HomePage} />
+				<Route render={() => <Redirect to="/" />} />
+			</Switch>
+		</Router>
   );
 }
 

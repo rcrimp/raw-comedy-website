@@ -92,10 +92,16 @@ const fontFaces = [
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-		  main: "#FFFFFF",
+		  main: "#B71C1C",
+			contrastText: "#FFFFFF"
 		},
 		secondary: {
-		  main: "#808080",
+		  main: "#FFFFFF",
+			contrastText: "#000000"
+		},
+		info: {
+		  main: "#4267B2",
+			contrastText: "#FFFFFF"
 		},
 	  },
 	typography: {
