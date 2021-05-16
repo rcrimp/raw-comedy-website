@@ -10,7 +10,7 @@ const FullScreenContainer = (props:any) => {
 		root: {
 			width: "100%",
 			height: "100vh",
-			backgroundColor: '#FF0000', //`rgb(${r}, ${g}, ${b})`,
+			backgroundColor: '#000000', //`rgb(${r}, ${g}, ${b})`,
 		},
 	}));
 

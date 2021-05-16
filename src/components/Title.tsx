@@ -8,7 +8,15 @@ import Image from 'material-ui-image'
 
 import RAWlogo from "../images/RAW.png";
 import curtainBackground from "../images/curtain.jpg";
-import seats from "../images/seats.png";
+
+import seats1 from "../images/theatre-seats/001.png";
+import seats2 from "../images/theatre-seats/002.png";
+import seats3 from "../images/theatre-seats/003.png";
+import seats4 from "../images/theatre-seats/004.png";
+import seats5 from "../images/theatre-seats/005.png";
+import seats6 from "../images/theatre-seats/006.png";
+import seats7 from "../images/theatre-seats/007.png";
+import seats8 from "../images/theatre-seats/008.png";
 
 const rawLogoDimendsions = {w: 635, h: 194};
 const curtainDimensions = {w: 1224, h: 857};
@@ -62,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: 8,
 		textShadow: shadowSettings,
 	},
+	seatsContainer: {
+		position: "absolute",
+		width: "100%",
+	},
 	seats: {
 		width: "100%",
 		filter: `drop-shadow(0 0 10px #000000BB)`,
@@ -71,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Title = () => {
 	const classes = useStyles();
+	const seats = [seats1, seats2, seats3, seats4, seats5, seats6, seats7, seats8];
 
 	return (
 		<div className={classes.root} >
@@ -80,9 +93,14 @@ const Title = () => {
 				<img className={classes.rawLogo} src={RAWlogo} alt="RAW logo" />
 				<Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography>
 			</Parallax>
-			<Parallax y={[-12, -150]} >
-				<img className={classes.seats} src={seats} />
-			</Parallax>
+			{seats.map((row, i) => (
+				<div className={classes.seatsContainer} >
+					<Parallax y={[-10 + Math.pow(2, i), -1 * Math.pow(2, i)]} >
+						<img className={classes.seats} src={row} />
+					</Parallax>
+				</div>
+			))
+			}
 
 		</div>
 	);

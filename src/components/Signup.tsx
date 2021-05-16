@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		fontSize: "8vw",
 		margin: "auto",
-		marginBottom: 0,
+		// marginBottom: 0,
 		textShadow: '0 0 10px #00000077',
 	},
 }));
@@ -45,7 +45,7 @@ const Signup = () => {
 	return (
 		<div className={classes.root} >
 			<img className={classes.bgimg} src={standingPerformer} />
-			<Parallax className={classes.textContainer} y={[250, -250]}>
+			<Parallax className={classes.textContainer} y={[200, -200]}>
 				<Typography className={classes.text} variant="h3">Are you funny?</Typography>
 			</Parallax>
 		</div>
