@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%",
 		display: "flex",
 		backgroundImage: `linear-gradient(0deg, black 50%, transparent)`,
+		paddingTop: "64px",
 	},
 	textContainer: {
 		// position: "absolute",

@@ -4,7 +4,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import { Typography } from '@material-ui/core';
 import { Parallax } from 'react-scroll-parallax';
-import Image from 'material-ui-image'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // aspectRatio={635/194}
 
 import RAWlogo from "../images/RAW.png";
@@ -19,9 +19,8 @@ import seats6 from "../images/theatre-seats/006.png";
 import seats7 from "../images/theatre-seats/007.png";
 import seats8 from "../images/theatre-seats/008.png";
 import mdSeats from "../images/theatre-seats/md-03-08.png"
-const seatingRow = [seats3, seats4, seats5, seats6, seats7, seats8];
 
-// const rawLogoDimendsions = {w: 635, h: 194};
+const rawLogoDimendsions = {w: 1920, h: 600};
 // const curtainDimensions = {w: 1224, h: 857};
 
 const shadowSettings = '0 2px 10px #000000BB'
@@ -105,6 +104,7 @@ const Title = (props: any) => {
 	const classes = useStyles();
 	const theme = useTheme();
 	const mobileView = useMediaQuery(theme.breakpoints.down("sm"));
+	// const mobileChairs = useMediaQuery(theme.breakpoints.down("xs"));
 	
 	let seats;
 
@@ -112,15 +112,15 @@ const Title = (props: any) => {
 	if (mobileView) {
 		seats = (
 		<>
-			<img className={classes.mobileSeats} src={mdSeats} />
+			<LazyLoadImage className={classes.mobileSeats} src={mdSeats} />
 			<div className={classes.mobileSeatsSpacing}/>	
 		</>
 		);
 	} else {
-		seats = seatingRow.map((row: any, i: number) => (
+		seats = [seats3, seats4, seats5, seats6, seats7, seats8].map((row: any, i: number) => (
 			<div key={`seatRow${i}`} className={classes.seatsContainer} >
-				<Parallax y={[-15 + Math.pow(2, i+2), -15 + -Math.pow(2, i+2)]} >
-					<img className={classes.seats} src={row} />
+				<Parallax y={[-20 + Math.pow(2, i+2.5), - Math.pow(2, i+2)]} >
+					<LazyLoadImage className={classes.seats} src={row} />
 				</Parallax>
 			</div>
 		))
@@ -128,10 +128,16 @@ const Title = (props: any) => {
 
 	return (
 		<div className={classes.root} >
-			<img className={classes.bgimg} src={curtainBackground} />
+			<LazyLoadImage className={classes.bgimg} src={curtainBackground} />
 			<div className={classes.textContainer}>
 				<Typography className={classes.textTop} variant="h1">LOWER SOUTH ISLAND</Typography>
-				<img className={classes.rawLogo} src={RAWlogo} alt="RAW logo" />
+				<LazyLoadImage
+					className={classes.rawLogo}
+					src={RAWlogo}
+					// width={rawLogoDimendsions.w}
+					// height={rawLogoDimendsions.h}
+					alt="RAW logo"
+				/>
 				<Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography>
 			</div>
 			{seats}

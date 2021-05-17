@@ -33,7 +33,10 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		button: {
 			// color: '#FFFFFF',
-		}
+		},
+		appBar: {
+			backgroundImage: 'linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.8))',
+		},
   }),
 );
 
@@ -42,14 +45,14 @@ const MenuBar = () => {
 
 	return (
 		<div className={classes.root}>
-      <AppBar elevation={0} color={"transparent"} position="absolute">
+      <AppBar className={classes.appBar} color={'transparent'} elevation={0} position="fixed">
         <Toolbar>
           <Typography color={"primary"} variant="h6" className={classes.title}></Typography>
 					
 					<div className={classes.buttonContainer}>
-						{/* <HashLink className={classes.link} smooth to="/raw#home">
-							<Button size='large' className={classes.button} color="primary">^</Button>
-						</HashLink> */}
+						<HashLink className={classes.link} smooth to="/raw#home">
+							<Button size='large' className={classes.button} color="secondary">TOP</Button>
+						</HashLink>
 						
 						<HashLink className={classes.link} smooth to="/raw#about">
 							<Button size='large' className={classes.button} color="secondary">About</Button>

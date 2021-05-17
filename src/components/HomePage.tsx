@@ -11,6 +11,7 @@ import FullScreenContainer from "./FullScreenContainer"
 import Title from "./Title";
 import About from "./About";
 import Signup from "./Signup";
+import SignupForms from "./SignupForms";
 import Tickets from "./Tickets";
 
 const HomePage = () => {
@@ -21,8 +22,9 @@ const HomePage = () => {
 			<ParallaxProvider>
 				<MenuBar />
 				<FullScreenContainer stretch={false} anchor={'home'} content={<Title />} />
-				<FullScreenContainer stretch={true} anchor={'about'} content={<About />} />
-				<FullScreenContainer stretch={false} anchor={'compete'} content={<Signup />} />
+				<FullScreenContainer stretch={false} shrink={true} anchor={'about'} content={<About />} />
+				<FullScreenContainer stretch={true} anchor={'ad'} content={<Signup />} />
+				<FullScreenContainer stretch={false} shrink={true} anchor={'compete'} content={<SignupForms />} />
 				<FullScreenContainer stretch={true} anchor={'tickets'} content={<Tickets />} />
 			</ParallaxProvider>
 		</ThemeProvider>

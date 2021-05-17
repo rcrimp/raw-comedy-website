@@ -103,7 +103,11 @@ const theme = createMuiTheme({
 		  main: "#4267B2",
 			contrastText: "#FFFFFF"
 		},
-	  },
+		background: {
+			paper: "#000000",
+			default: "#000000"
+		}
+	},
 	typography: {
 	fontFamily: 'Nexa, Arial',
 		h1: {
@@ -126,6 +130,7 @@ const theme = createMuiTheme({
 		},
 		body1: {
       fontWeight: 400,
+			fontSize: 18,
     },
 		body2: {
       fontWeight: 200,

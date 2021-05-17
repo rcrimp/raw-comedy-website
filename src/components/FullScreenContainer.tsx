@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
     },
 		backgroundColor: '#000000', //`rgb(${r}, ${g}, ${b})`,
 	},
+	rootShrink: {
+		// position: "relative",
+		width: "100%",
+		backgroundColor: '#000000', //`rgb(${r}, ${g}, ${b})`,
+	},
 	scrollIcon: {
 		position: "absolute",
 		top: 0,
@@ -43,7 +48,7 @@ const FullScreenContainer = (props:any) => {
 	const classes = useStyles();
 
 	return (
-		<section id={props.anchor} className={props.stretch ? classes.rootStretch: classes.root} >
+		<section id={props.anchor} className={props.stretch ? classes.rootStretch : props.shrink ? classes.rootShrink : classes.root} >
 			{props.content}
 			{/* <KeyboardArrowDownIcon className={classes.scrollIcon}/> */}
 		</section >

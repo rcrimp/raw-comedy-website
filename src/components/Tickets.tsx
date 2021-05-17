@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Link } from 'react-router-dom';
 
 import { Typography } from '@material-ui/core';
 import { Parallax } from 'react-scroll-parallax';
@@ -17,6 +18,9 @@ import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 
+import DunedinComedyLogo from '../images/dunedin-comedy.jpg';
+import RemarkablyFunnyLogo from '../images/remarkably-funny.jpg';
+
 import moment from 'moment';
 
 
@@ -25,8 +29,10 @@ const useStyles = makeStyles((theme) => ({
 		color: "white",
 		display: "flex",
 		flexDirection: "column",
-		justifyContent: "center",
-		height: "100%",
+		alignItems: "center",
+		justifyContent: "stretch",
+		minHeight: "100vh",
+		paddingTop: "64px",
 	},
 	title: {
 		width: "100%",
@@ -37,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		flexDirection: "column",
 		margin: "auto",
+		marginBottom: "24px",
 		[theme.breakpoints.up('md')]: {
       maxWidth: "960px",
     },
@@ -45,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 		padding: "8px",
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "space-between",
+		justifyContent: "center",
 	},
 	flexCell: {
 		margin: "0 0px",
@@ -53,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 		lineHeight: "36px",
 		height: "36px",
 		[theme.breakpoints.up('md')]: {
-			margin: "0 16px",
+			margin: "0 16px 0 0",
 		}
 	},
 	buttonTickets: {
@@ -63,6 +70,11 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#fff',
       color: '#B71C1C',
 		},
+		[theme.breakpoints.up('md')]: {
+      // marginLeft: "16px",
+			// borderRadius: "4px",
+			margin: "0px",
+    },
 	},
 	buttonFB: {
 		backgroundColor: '#3c52b2',
@@ -74,9 +86,36 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.down('sm')]: {
       marginLeft: "16px",
 			borderRadius: "4px",
-			padding: "6px",
+			// padding: "6px",
     },
 	},
+	footer: {
+		padding: "16px",
+		flexGrow: 10,
+		width: "100%",
+		display: "flex",
+		flexWrap: "wrap",
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	producerText: {
+		padding: "0 16px",
+		height: "64px",
+		textAlign: "center",
+		lineHeight: "64px",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	producer: {
+		color: "#FFF",
+		textDecoration: 'none',
+		display: "flex",
+		flexDirection: "row",
+		"& img": {
+			width: "64px",
+			borderRadius: "50%",
+		},
+	}
 }));
 
 
@@ -137,6 +176,7 @@ const Tickets = () => {
 	const classes = useStyles();
 	const theme = useTheme();
 	const mobileView = useMediaQuery(theme.breakpoints.down("sm"));
+	const xsView = useMediaQuery('(max-width:420px)');
 
 	const generateEventFlex = (events: any[]) => {
 		return (
@@ -164,12 +204,12 @@ const Tickets = () => {
 								className={classes.buttonTickets}
 								startIcon={<ConfirmationNumberIcon />}
 							>
-								{mobileView ? 'TIX' : 'Tickets'}
+								{xsView ? 'TIX' : 'Tickets'}
 							</Button>
 						</div>
 
-						{mobileView ? (
-							<IconButton className={classes.buttonFB}><FacebookIcon /></IconButton>
+						{xsView ? (
+							<IconButton className={classes.buttonFB} style={{padding:"6px"}}><FacebookIcon /></IconButton>
 								) : (
 							<div className={classes.flexCell} >
 								<Button variant="contained" className={classes.buttonFB} startIcon={<FacebookIcon />}>Event</Button>
@@ -185,7 +225,7 @@ const Tickets = () => {
 	return (
 		<div className={classes.root} >
 			<div>
-				<Typography className={classes.title} align="center" variant="h3">Event Tickets</Typography>
+				<Typography className={classes.title} align="center" variant="h3">Tickets Lower South Island</Typography>
 			</div>
 			
 			<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
@@ -194,7 +234,21 @@ const Tickets = () => {
 			{generateEventFlex(allEvents.filter((e) => e.type=='Semi Final'))}
 			<Typography className={classes.title} align="center" variant="h4">Regional Final</Typography>
 			{generateEventFlex(allEvents.filter((e) => e.type=='Regional Final'))}
+
+			<div className={classes.footer}>
+				<Typography className={classes.producerText} variant="body1">Produced by </Typography>
+				<a className={classes.producer} href={'https://www.facebook.com/dunedincomedy'} >
+					<img src={DunedinComedyLogo} />
+					<Typography className={classes.producerText} variant="body1">Dunedin Comedy</Typography>
+				</a>
+				<a className={classes.producer} href={'https://www.facebook.com/queenstowncomedy'}>
+					<img src={RemarkablyFunnyLogo} />
+					<Typography className={classes.producerText} variant="body1">Remarkably Funny</Typography>
+				</a>
+			</div>
+
 		</div>
+
 	);
 }
 
