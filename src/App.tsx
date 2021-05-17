@@ -14,10 +14,10 @@ import HomePage from './components/HomePage'
 function App() {
 
   return (
-		<Router basename={'/raw-comedy-website'}>
+		<Router basename={'/'}>
 			<Switch>
 				<Route exact path={'/'} component={HomePage} />
-				<Route exact path={'/raw'} component={HomePage} />
+				{/* <Route exact path={'/raw'} component={HomePage} /> */}
 				<Route render={() => <Redirect to="/" />} />
 			</Switch>
 		</Router>

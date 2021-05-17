@@ -75,7 +75,7 @@ const Signup = () => {
 
 	return (
 		<div className={classes.root} >
-			<LazyLoadImage className={classes.bgimg} src={standingPerformer} />
+			<img className={classes.bgimg} src={standingPerformer} />
 			<div className={classes.blendShadow} />
 						
 				<div className={classes.textContainer}>

@@ -50,19 +50,19 @@ const MenuBar = () => {
           <Typography color={"primary"} variant="h6" className={classes.title}></Typography>
 					
 					<div className={classes.buttonContainer}>
-						<HashLink className={classes.link} smooth to="/raw#home">
+						<HashLink className={classes.link} smooth to="/#home">
 							<Button size='large' className={classes.button} color="secondary">TOP</Button>
 						</HashLink>
 						
-						<HashLink className={classes.link} smooth to="/raw#about">
+						<HashLink className={classes.link} smooth to="/#about">
 							<Button size='large' className={classes.button} color="secondary">About</Button>
 						</HashLink>
 						
-						<HashLink className={classes.link} smooth to="/raw#compete">
+						<HashLink className={classes.link} smooth to="/#compete">
 							<Button size='large' className={classes.button} color="secondary">Compete</Button>
 						</HashLink>
 						
-						<HashLink className={classes.link} smooth to="/raw#tickets">
+						<HashLink className={classes.link} smooth to="/#tickets">
 							<Button size='large' className={classes.button} color="secondary">Tickets</Button>
 						</HashLink>
 					</div>

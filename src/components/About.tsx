@@ -95,11 +95,11 @@ const About = () => {
 				</div>
 
 				<div>
-					<HashLink className={classes.link} smooth to="/raw#compete">
+					<HashLink className={classes.link} smooth to="/#compete">
 						<Button className={classes.button} size="large" variant="contained" color="primary">Register to Compete</Button>
 					</HashLink>
           
-					<HashLink className={classes.link} smooth to="/raw#tickets">
+					<HashLink className={classes.link} smooth to="/#tickets">
 						<Button className={classes.button} size="large" variant="contained" color="primary">Purchase Tickets</Button>
 					</HashLink>
 				</div>
