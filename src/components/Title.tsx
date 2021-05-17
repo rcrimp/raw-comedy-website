@@ -8,7 +8,7 @@ import Image from 'material-ui-image'
 // aspectRatio={635/194}
 
 import RAWlogo from "../images/RAW.png";
-import curtainBackground from "../images/curtain.jpg";
+import curtainBackground from "../images/curtain-HD.jpg";
 
 import seats1 from "../images/theatre-seats/001.png";
 import seats2 from "../images/theatre-seats/002.png";

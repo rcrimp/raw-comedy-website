@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Button, Typography } from '@material-ui/core';
 import { Parallax } from 'react-scroll-parallax';
 
-import standingPerformer from "../images/actingAudition.jpg";
+import standingPerformer from "../images/actingAudition-LD.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {

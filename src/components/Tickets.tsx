@@ -129,7 +129,8 @@ const allEvents = [
 		date: moment('21 Aug 2021 19:30:00'),
 		city: 'Queenstown',
 		tickets: 'google.com',
-		fbevent: 'facebook.com'},
+		fbevent: 'facebook.com'
+	}
   ];
 
 const Tickets = () => {
