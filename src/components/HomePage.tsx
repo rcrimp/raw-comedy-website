@@ -13,6 +13,8 @@ import About from "./About";
 import Signup from "./Signup";
 import SignupForms from "./SignupForms";
 import Tickets from "./Tickets";
+import Images from "./Images";
+import Footer from "./Footer";
 
 const HomePage = () => {
 
@@ -26,6 +28,8 @@ const HomePage = () => {
 				<FullScreenContainer stretch={true} anchor={'ad'} content={<Signup />} />
 				<FullScreenContainer stretch={false} shrink={true} anchor={'compete'} content={<SignupForms />} />
 				<FullScreenContainer stretch={true} anchor={'tickets'} content={<Tickets />} />
+				<FullScreenContainer stretch={false} shrink={true} anchor={'gallery'} content={<Images />} />
+				<Footer />
 			</ParallaxProvider>
 		</ThemeProvider>
 	);

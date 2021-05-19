@@ -88,33 +88,6 @@ const useStyles = makeStyles((theme) => ({
 			borderRadius: "4px",
 			// padding: "6px",
     },
-	},
-	footer: {
-		padding: "16px",
-		flexGrow: 10,
-		width: "100%",
-		display: "flex",
-		flexWrap: "wrap",
-		justifyContent: "center",
-		alignItems: "center",
-	},
-	producerText: {
-		padding: "0 16px",
-		height: "64px",
-		textAlign: "center",
-		lineHeight: "64px",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-	producer: {
-		color: "#FFF",
-		textDecoration: 'none',
-		display: "flex",
-		flexDirection: "row",
-		"& img": {
-			width: "64px",
-			borderRadius: "50%",
-		},
 	}
 }));
 
@@ -234,19 +207,6 @@ const Tickets = () => {
 			{generateEventFlex(allEvents.filter((e) => e.type=='Semi Final'))}
 			<Typography className={classes.title} align="center" variant="h4">Regional Final</Typography>
 			{generateEventFlex(allEvents.filter((e) => e.type=='Regional Final'))}
-
-			<div className={classes.footer}>
-				<Typography className={classes.producerText} variant="body1">Produced by </Typography>
-				<a className={classes.producer} href={'https://www.facebook.com/dunedincomedy'} >
-					<img src={DunedinComedyLogo} />
-					<Typography className={classes.producerText} variant="body1">Dunedin Comedy</Typography>
-				</a>
-				<a className={classes.producer} href={'https://www.facebook.com/queenstowncomedy'}>
-					<img src={RemarkablyFunnyLogo} />
-					<Typography className={classes.producerText} variant="body1">Remarkably Funny</Typography>
-				</a>
-			</div>
-
 		</div>
 
 	);

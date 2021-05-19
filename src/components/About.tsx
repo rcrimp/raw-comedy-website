@@ -28,19 +28,23 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.up('md')]: {
       marginTop: "200px",
     },
-		
 		color: "white",
-		
-
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "space-around",
 	},
+	buttonList: {
+		// maxWidth: "800px",
+		display: "flex",
+		flexDirection: "row",
+		flexWrap: "wrap",
+		justifyContent: "space-evenly",
+	},
 	button: {
-		margin: "auto",
+		// margin: "auto",
 		display: "block",
-		width: "50%",
-		marginBottom: "16px",
+		minWidth: "300px",
+		margin: "0 16px 16px 0",
 		backgroundColor: '#B71C1C',
     color: '#fff',
     '&:hover': {
@@ -76,27 +80,27 @@ const About = () => {
 		<div className={classes.root}>
 			<div className={classes.textContainer}>
 				
-				<div>
-					<Typography className={classes.title} align='center' variant="h3">The RAW Comedy Quest</Typography>
-					<Typography className={classes.subtitle} align='center' variant="h5" paragraph={true}>
-						Searching for New Zealand's best new comedian
-					</Typography>
-				</div>
-				{/* <Typography variant="body1" paragraph={true}>
-					The RAW Comedy Quest is a nationwide comedy comepition and the first step for many kiwi comedians.
-				</Typography> */}
-				<div>
-					<Typography variant="body1" paragraph={true}>
-						Launched in 1995, the RAW Comedy Quest is New Zealand's biggest comedy competition, with $2500 in prize money, the glory and promises of further work as a professional comedian to be won. Many previous winners have found professional success as career comedians, while others honed a few good jokes for the office Christmas party. But most importantly all of them have faced humanity's greatest fear... "Public Speaking", with the added expectation of being funny.
-					</Typography>
-					<Typography variant="body1" paragraph={true}>
-						The Lower South Island is accepting entrants from the Otago and Southland regions, who will be competing for an all-inclusive trip to the Grand National Final in Auckland.
-					</Typography>
-				</div>
+				<Typography className={classes.title} align='center' variant="h3">The RAW Comedy Quest</Typography>
+				<Typography className={classes.subtitle} align='center' variant="h5" paragraph={true}>
+					Searching for New Zealand's best new comedian
+				</Typography>
 
-				<div>
+				<Typography variant="body1" paragraph={true}>
+					Every year hundreds of funny folk from across the nation sign up for their time in the spotlight as part of The RAW Comedy Quest, the country’s largest and most prestigious open mic comedy compeititon.
+
+					Now we want you! All you need is five minutes of original material and the glory could be yours… get through the heats and finals and you could be the New Zealand's next star comedian.
+				</Typography>
+				<Typography variant="body1" paragraph={true}>
+					The Lower South Island is accepting sign ups from the Otago and Southland regions, who will compete for an all-inclusive trip to the Grand National Final in Auckland.
+				</Typography>
+				<Typography variant="body1" paragraph={true}>
+					So what are you waiting for? Sign up now!
+				</Typography>
+
+
+				<div className={classes.buttonList}>
 					<HashLink className={classes.link} smooth to="/#compete">
-						<Button className={classes.button} size="large" variant="contained" color="primary">Register to Compete</Button>
+						<Button className={classes.button} size="large" variant="contained" color="primary">Sign Up</Button>
 					</HashLink>
           
 					<HashLink className={classes.link} smooth to="/#tickets">

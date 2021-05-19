@@ -1,9 +1,10 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-import { Button, Typography } from '@material-ui/core';
+import { Button, Typography, List, ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
 import { Parallax } from 'react-scroll-parallax';
 
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import standingPerformer from "../images/actingAudition-LD.jpg";
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		
 		// margin: "auto",
 		// marginTop: 0,
-		textShadow: '0 0 12px #000000FF',
+		// textShadow: '0 0 12px #000000FF',
 		[theme.breakpoints.up('md')]: {
       fontSize: "5vw",
     },
@@ -38,14 +39,16 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		// margin: "auto",
 		// marginBottom: 0,
-		textShadow: '0 0px 10px #000000ff',
+		// textShadow: '0 0px 10px #000000ff',
 	},
 	buttonContainer: {
+		margin: "auto",
+		maxWidth: "800px",
 		display: "flex",
-		flexDirection: "column",
+		flexDirection: "row",
 		flexWrap: "wrap",
-		justifyContent: "center",
-		alignContent: "center",
+		justifyContent: "space-evenly",
+		// alignContent: "center",
 		// margin: "auto",
 	},
 	button: {
@@ -62,13 +65,32 @@ const useStyles = makeStyles((theme) => ({
 	},
 	link: {
 		color: "#FFFFFF",
-		textShadow: '0 0px 10px #000000ff',
+		// textShadow: '0 0px 10px #000000ff',
 	},
+	list: {
+		maxWidth: "800px",
+		margin: "auto",
+		color: "white"
+	}
 }));
 
 const SignupForms = () => {
 	const theme = useTheme();
 	const classes = useStyles(theme);
+
+	const generateListItem = (text: string) => {
+		return (<ListItem>
+			<ListItemIcon>
+				<ArrowRightIcon style={{color: "white"}} />
+			</ListItemIcon>
+			<ListItemText
+				primary={
+					<Typography variant="body1">
+						{text}
+					</Typography>}
+			/>
+		</ListItem>)
+	} 
 
 	return (
 		<div className={classes.root} >
@@ -77,19 +99,32 @@ const SignupForms = () => {
 					<div>
 						<Typography className={classes.text} align="center" variant="h3">To Compete</Typography>
 					</div>
-
-						<Typography className={classes.text} variant="body1">Amateur's only</Typography>
-						<Typography className={classes.text} variant="body1">4-6 minute performance</Typography>
-						<Typography className={classes.text} variant="body1">Must perform your own material</Typography>
-						{/* <Typography className={classes.text} variant="body1">Otago and Southland registrations</Typography> */}
-						<Typography className={classes.text} variant="body1">Must be a New Zealand citizen or resident</Typography>
-						<Typography className={classes.text} variant="body1">Can't have been a finalist from previous years</Typography>
-
+					<List className={classes.list} dense={true}>
+						{generateListItem("Must be a New Zealand Citizen, Permanent Resident, or working towards Residency.")}
+						{generateListItem("You cannot enter in different regions in the same year.")}
+						{generateListItem("If you've been a National Finalist, or twice Regional Finalist, you can't enter again.")}
+						{generateListItem("If you've competed before you may enter again, but a maximum of 3 different years.")}
+						{generateListItem("You must be a first timer or amateur. That is, you can not have earned more than $500 from performing live comedy, as of 1 January 2021.")}
+          </List>
+					<Typography className={classes.text} variant="body2">
+						For rule clarification email us at <a className={classes.link} href="mailto:remarkablyfunny@gmail.com">remarkablyfunny@gmail.com</a>
+					</Typography>
+				</div>
+				
+				<div className={classes.textBox}>
+					<div>
+						<Typography className={classes.text} align="center" variant="h4">Your Performance</Typography>
 					</div>
+					<List className={classes.list} dense={true}>
+						{generateListItem("Solo, group, stand-up, music, sketch... all forms of live comedy are welcome.")}
+						{generateListItem("Your performance must be no longer than 5 - F I V E - minutes.")}
+						{generateListItem("Your material must be original.")}
+          </List>
+				</div>
 					
 					<div className={classes.textBox}>
 						
-						<Typography className={classes.text} variant="h4">Registration Forms</Typography>
+						<Typography className={classes.text} variant="h4" paragraph={true} >Sign Up Forms</Typography>
 						<div className={classes.buttonContainer}>
 							<Button className={classes.button} color="primary" size="large" variant="contained" >Dunedin </Button>
 							<Button className={classes.button} color="primary" size="large" variant="contained" >Wānaka </Button>
