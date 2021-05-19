@@ -27,7 +27,7 @@ const HomePage = () => {
 				<FullScreenContainer stretch={false} shrink={true} anchor={'about'} content={<About />} />
 				<FullScreenContainer stretch={true} anchor={'ad'} content={<Signup />} />
 				<FullScreenContainer stretch={false} shrink={true} anchor={'compete'} content={<SignupForms />} />
-				<FullScreenContainer stretch={true} anchor={'tickets'} content={<Tickets />} />
+				<FullScreenContainer stretch={false} shrink={true} anchor={'tickets'} content={<Tickets />} />
 				<FullScreenContainer stretch={false} shrink={true} anchor={'gallery'} content={<Images />} />
 				<Footer />
 			</ParallaxProvider>

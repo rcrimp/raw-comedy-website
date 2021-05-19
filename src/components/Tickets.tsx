@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "stretch",
-		minHeight: "100vh",
+		// minHeight: "100vh",
 		paddingTop: "64px",
 	},
 	title: {
@@ -187,13 +187,18 @@ const Tickets = () => {
 			<div>
 				<Typography className={classes.title} align="center" variant="h3">Tickets Lower South Island</Typography>
 			</div>
-			
-			<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
-			{generateEventFlex(allEvents.filter((e) => e.type==='Heat'))}
-			<Typography className={classes.title} align="center" variant="h4">Semi Finals</Typography>
-			{generateEventFlex(allEvents.filter((e) => e.type==='Semi Final'))}
-			<Typography className={classes.title} align="center" variant="h4">Regional Final</Typography>
-			{generateEventFlex(allEvents.filter((e) => e.type==='Regional Final'))}
+			<div>
+				<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
+				{generateEventFlex(allEvents.filter((e) => e.type==='Heat'))}
+			</div>
+			<div>
+				<Typography className={classes.title} align="center" variant="h4">Semi Finals</Typography>
+				{generateEventFlex(allEvents.filter((e) => e.type==='Semi Final'))}
+			</div>
+			<div>
+				<Typography className={classes.title} align="center" variant="h4">Regional Final</Typography>
+				{generateEventFlex(allEvents.filter((e) => e.type==='Regional Final'))}
+			</div>
 		</div>
 
 	);

@@ -94,14 +94,14 @@ const SignupForms = () => {
 						<Typography className={classes.text} align="center" variant="h3">To Compete</Typography>
 					</div>
 					<List className={classes.list} dense={true}>
-						{generateListItem("Must be a New Zealand Citizen, Permanent Resident, or working towards Residency.")}
+						{generateListItem("Must be a New Zealand Citizen or Permanent Resident (or working towards residency).")}
 						{generateListItem("You cannot enter in different regions in the same year.")}
 						{generateListItem("If you've been a National Finalist, or twice Regional Finalist, you can't enter again.")}
-						{generateListItem("If you've competed before you may enter again, but a maximum of 3 different years.")}
+						{generateListItem("If you've competed before you may enter again, but up to a maximum of 3 different years.")}
 						{generateListItem("You must be a first timer or amateur. That is, you can not have earned more than $500 from performing live comedy, as of 1 January 2021.")}
           </List>
 					<Typography className={classes.text} variant="body2">
-						For rule clarification email us at <a className={classes.link} href="mailto:remarkablyfunny@gmail.com">remarkablyfunny@gmail.com</a>
+						For rule clarifications or special exemptions email us at <a className={classes.link} href="mailto:remarkablyfunny@gmail.com">remarkablyfunny@gmail.com</a>
 					</Typography>
 				</div>
 				
