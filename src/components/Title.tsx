@@ -8,7 +8,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 // aspectRatio={635/194}
 
 import RAWlogo from "../images/RAW.png";
-import curtainBackground from "../images/curtain-HD.jpg";
+// import curtainBackground from "../images/curtain-HD.jpg";
 
 import seats1 from "../images/theatre-seats/001.png";
 import seats2 from "../images/theatre-seats/002.png";
@@ -20,6 +20,7 @@ import seats7 from "../images/theatre-seats/007.png";
 import seats8 from "../images/theatre-seats/008.png";
 import mdSeats from "../images/theatre-seats/md-03-08.png"
 
+const curtainBackground = "https://live.staticflickr.com/65535/51189156798_46c0c5f9e7_k.jpg";
 const rawLogoDimendsions = {w: 1920, h: 600};
 // const curtainDimensions = {w: 1224, h: 857};
 

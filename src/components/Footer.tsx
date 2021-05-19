@@ -18,10 +18,11 @@ import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 
-import DunedinComedyLogo from '../images/dunedin-comedy.jpg';
-import RemarkablyFunnyLogo from '../images/remarkably-funny.jpg';
-
 import moment from 'moment';
+// import DunedinComedyLogo from '../images/dunedin-comedy.jpg';
+// import RemarkablyFunnyLogo from '../images/remarkably-funny.jpg';
+const DunedinComedyLogo = "https://live.staticflickr.com/65535/51190004345_72a254feab_w.jpg";
+const RemarkablyFunnyLogo = "https://live.staticflickr.com/65535/51189707144_737e3b6106_w.jpg";
 
 
 const useStyles = makeStyles((theme) => ({

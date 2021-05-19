@@ -6,7 +6,8 @@ import { Parallax } from 'react-scroll-parallax';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import standingPerformer from "../images/actingAudition-LD.jpg";
+// import standingPerformer from "../images/actingAudition-LD.jpg";
+const standingPerformer = "https://live.staticflickr.com/65535/51189707244_663ed2c8a6_k.jpg"
 
 const useStyles = makeStyles((theme) => ({
 	root: {

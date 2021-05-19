@@ -28,59 +28,59 @@ const Images = () => {
 
 	const Images = [
 		{
-			url: 'audience.jpg',
+			url: 'https://live.staticflickr.com/65535/51190003740_307a6ddc57_h.jpg',
 			label: 'The New Athenaum Theatre with the audience sitting in patient anticipation.',
 		},
 		{
-			url: 'greenroom.jpg',
+			url: 'https://live.staticflickr.com/65535/51188938701_f86e9120e3_h.jpg',
 			label: 'The 2020 Finalists: Harriet Moir, Shane Mulvey, Sean Tinker, Hamish Mabon-Ross, Maggie Rogers, Mike "Chewie" Benett, Megan Cartwright, and John.',
 		},
 		{
-			url: 'winner.jpg',
+			url: 'https://live.staticflickr.com/65535/51188231277_fe315dd2a8_h.jpg',
 			label: 'Congratulations to Maggie Rogers for winning the 2020 Lower South Island Raw Comedy Quest',
 		},
 		{
-			url: 'judges.jpg',
+			url: 'https://live.staticflickr.com/65535/51190003670_e56a12e990_h.jpg',
 			label: 'Big thank you to our judges Gareth McMillan and H-J Kilkelly; our Host Marty Bright; and show Producer Tim Müller.',
 		},
 		{
-			url: 'harriet.jpg',
+			url: 'https://live.staticflickr.com/65535/51190003855_fbb338a0ec_h.jpg',
 			label: 'Harriet Moir',
 		},
 		{
-			url: '2-shane.jpg',
+			url: 'https://live.staticflickr.com/65535/51189156163_4ed4c157e7_h.jpg',
 			label: 'Shane Mulvey',
 		},
 		{
-			url: 'hamish.jpg',
+			url: 'https://live.staticflickr.com/65535/51188231317_29b9dac6bd_h.jpg',
 			label: 'Hamish Mabon-Ross',
 		},
 		{
-			url: '2-maggie.jpg',
+			url: 'https://live.staticflickr.com/65535/51189156258_a1a56427ce_h.jpg',
 			label: 'Maggie Rogers',
 		},
 		{
-			url: '2-chewie.jpg',
+			url: 'https://live.staticflickr.com/65535/51189706709_170bbc5a57_h.jpg',
 			label: 'Mike "Chewie" Bennett',
 		},
 		{
-			url: '2-megan.jpg',
+			url: 'https://live.staticflickr.com/65535/51188938786_83a4bcf9e4_h.jpg	',
 			label: 'Megan Cartwright',
 		},
 		{
-			url: '2-sean.jpg',
+			url: 'https://live.staticflickr.com/65535/51188231387_3aec2d241b_h.jpg',
 			label: 'Sean Tinker',
 		},
 		{
-			url: '2-john.jpg',
+			url: 'https://live.staticflickr.com/65535/51189706689_ec29abdfa5_h.jpg',
 			label: 'John',
 		},
 		{
-			url: 'winner-standing-ovation.jpg',
+			url: 'https://live.staticflickr.com/65535/51189156038_352501cc67_h.jpg',
 			label: 'Applause for the 2020 Winner Maggie Rogers.',
 		},
 		{
-			url: 'audience-leaving.jpg',
+			url: 'https://live.staticflickr.com/65535/51190003725_f4ca3d5295_h.jpg',
 			label: 'Audience leaving all tuckered out from laughing.',
 		}
 	];
@@ -93,7 +93,8 @@ const Images = () => {
 			>
 				{Images.map((image, i) => (
 					<div>
-						<img src={`${window.location.origin}${'/gallery/'}${image.url}`}/>
+						{/* <img src={`${window.location.origin}${'/gallery/'}${image.url}`}/> */}
+						<img src={image.url}/>
 					<p className="legend">{image.label}</p>
 				</div>
 				))}
