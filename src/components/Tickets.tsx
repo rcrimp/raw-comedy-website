@@ -1,26 +1,13 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { Link } from 'react-router-dom';
-
 import { Typography } from '@material-ui/core';
-import { Parallax } from 'react-scroll-parallax';
-
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
-
-import DunedinComedyLogo from '../images/dunedin-comedy.jpg';
-import RemarkablyFunnyLogo from '../images/remarkably-funny.jpg';
-
+// import DunedinComedyLogo from '../images/dunedin-comedy.jpg';
+// import RemarkablyFunnyLogo from '../images/remarkably-funny.jpg';
 import moment from 'moment';
 
 
@@ -202,11 +189,11 @@ const Tickets = () => {
 			</div>
 			
 			<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
-			{generateEventFlex(allEvents.filter((e) => e.type=='Heat'))}
+			{generateEventFlex(allEvents.filter((e) => e.type==='Heat'))}
 			<Typography className={classes.title} align="center" variant="h4">Semi Finals</Typography>
-			{generateEventFlex(allEvents.filter((e) => e.type=='Semi Final'))}
+			{generateEventFlex(allEvents.filter((e) => e.type==='Semi Final'))}
 			<Typography className={classes.title} align="center" variant="h4">Regional Final</Typography>
-			{generateEventFlex(allEvents.filter((e) => e.type=='Regional Final'))}
+			{generateEventFlex(allEvents.filter((e) => e.type==='Regional Final'))}
 		</div>
 
 	);

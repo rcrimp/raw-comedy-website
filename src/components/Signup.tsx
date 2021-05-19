@@ -1,10 +1,8 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-import { Button, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import { Parallax } from 'react-scroll-parallax';
-
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // import standingPerformer from "../images/actingAudition-LD.jpg";
 const standingPerformer = "https://live.staticflickr.com/65535/51189707244_663ed2c8a6_k.jpg"
@@ -76,7 +74,7 @@ const Signup = () => {
 
 	return (
 		<div className={classes.root} >
-			<img className={classes.bgimg} src={standingPerformer} />
+			<img className={classes.bgimg} src={standingPerformer} alt="" />
 			<div className={classes.blendShadow} />
 						
 				<div className={classes.textContainer}>

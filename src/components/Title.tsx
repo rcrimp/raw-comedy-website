@@ -10,8 +10,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import RAWlogo from "../images/RAW.png";
 // import curtainBackground from "../images/curtain-HD.jpg";
 
-import seats1 from "../images/theatre-seats/001.png";
-import seats2 from "../images/theatre-seats/002.png";
+// import seats1 from "../images/theatre-seats/001.png";
+// import seats2 from "../images/theatre-seats/002.png";
 import seats3 from "../images/theatre-seats/003.png";
 import seats4 from "../images/theatre-seats/004.png";
 import seats5 from "../images/theatre-seats/005.png";
@@ -21,8 +21,6 @@ import seats8 from "../images/theatre-seats/008.png";
 import mdSeats from "../images/theatre-seats/md-03-08.png"
 
 const curtainBackground = "https://live.staticflickr.com/65535/51189156798_46c0c5f9e7_k.jpg";
-const rawLogoDimendsions = {w: 1920, h: 600};
-// const curtainDimensions = {w: 1224, h: 857};
 
 const shadowSettings = '0 2px 10px #000000BB'
 

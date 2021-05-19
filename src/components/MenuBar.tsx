@@ -4,12 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-
-import ReactDOM from 'react-dom'
-// import HashLink from 'react-anchor-link-smooth-scroll'
 import { HashLink  } from 'react-router-hash-link';
-
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -4,10 +4,7 @@ import {
 	Switch,
 	Route,
 	Redirect,
-  } from "react-router-dom";
-
-	import ReactDOM from 'react-dom'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+} from "react-router-dom";
 
 import HomePage from './components/HomePage'
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { HashLink  } from 'react-router-hash-link';
 import { Typography, Button } from '@material-ui/core';
-import { Parallax } from 'react-scroll-parallax';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

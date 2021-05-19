@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
-import { Button, Typography, List, ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -94,7 +94,7 @@ const Images = () => {
 				{Images.map((image, i) => (
 					<div>
 						{/* <img src={`${window.location.origin}${'/gallery/'}${image.url}`}/> */}
-						<img src={image.url}/>
+						<img src={image.url} alt={image.label}/>
 					<p className="legend">{image.label}</p>
 				</div>
 				))}

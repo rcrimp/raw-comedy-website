@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-
 const shadowSettings = '0 2px 10px #000000BB';
 
 const useStyles = makeStyles((theme) => ({

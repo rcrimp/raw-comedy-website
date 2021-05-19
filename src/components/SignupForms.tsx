@@ -1,13 +1,7 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-
 import { Button, Typography, List, ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
-import { Parallax } from 'react-scroll-parallax';
-
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-import standingPerformer from "../images/actingAudition-LD.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
