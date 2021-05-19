@@ -92,7 +92,7 @@ const Images = () => {
 				autoFocus={false} infiniteLoop={true} showStatus={false} autoPlay={false}
 			>
 				{Images.map((image, i) => (
-					<div>
+					<div key={`image-galleyr-${i}`}>
 						{/* <img src={`${window.location.origin}${'/gallery/'}${image.url}`}/> */}
 						<img src={image.url} alt={image.label}/>
 					<p className="legend">{image.label}</p>
