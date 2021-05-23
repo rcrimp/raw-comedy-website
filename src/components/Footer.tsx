@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 		lineHeight: "64px",
 		alignItems: "center",
 		justifyContent: "center",
+		color: "white"
 	},
 	producer: {
 		color: "#FFF",
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
 			width: "64px",
 			borderRadius: "50%",
 		},
-	}
+	},
 }));
 
 const Tickets = () => {
@@ -65,6 +66,7 @@ const Tickets = () => {
 					<Typography className={classes.producerText} variant="body1">Remarkably Funny</Typography>
 				</a>
 			</div>
+			<Typography className={classes.producerText} variant="body2">Website by <a href="mailto:reuben@dunedincomedy.co.nz">Reuben Crisp</a></Typography>
 		</div>
 
 	);

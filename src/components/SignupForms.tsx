@@ -118,12 +118,12 @@ const SignupForms = () => {
 					
 					<div className={classes.textBox}>
 						
-						<Typography className={classes.text} variant="h4" paragraph={true} >Sign Up Forms</Typography>
+						<Typography className={classes.text} variant="h4" paragraph={true} >Lower South Island Sign Up</Typography>
+						<Typography className={classes.text} variant="body1">Heats in Dunedin, Queenstown, Invercargill, Wānaka, and Clyde.</Typography>
+						<Typography className={classes.text} variant="body1">If you live elsewhere you may still compete if you are prepared to travel.</Typography>
+						<Typography className={classes.text} variant="body1">You must also be prepared to travel for the semis/finals, there is funding available for travel grants.</Typography>
 						<div className={classes.buttonContainer}>
-							<Button className={classes.button} color="primary" size="large" variant="contained" >Dunedin </Button>
-							<Button className={classes.button} color="primary" size="large" variant="contained" >Wānaka </Button>
-							<Button className={classes.button} color="primary" size="large" variant="contained" >Queenstown </Button>
-							<Button className={classes.button} color="primary" size="large" variant="contained" >Invercargill </Button>
+							<Button className={classes.button} href="https://timmuller.typeform.com/to/pKgqvp" color="primary" size="large" variant="contained" >Sign Up Form</Button>
 						</div>
 
 						<Typography className={classes.text} variant="body1">Other Regions</Typography>

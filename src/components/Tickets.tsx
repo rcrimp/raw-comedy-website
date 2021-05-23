@@ -58,8 +58,6 @@ const useStyles = makeStyles((theme) => ({
       color: '#B71C1C',
 		},
 		[theme.breakpoints.up('md')]: {
-      // marginLeft: "16px",
-			// borderRadius: "4px",
 			margin: "0px",
     },
 	},
@@ -73,9 +71,23 @@ const useStyles = makeStyles((theme) => ({
 		[theme.breakpoints.down('sm')]: {
       marginLeft: "16px",
 			borderRadius: "4px",
-			// padding: "6px",
     },
-	}
+	},
+	buttonTicketsDisabled: {
+		backgroundColor: '#333 !important',
+    color: '#777 !important',
+		[theme.breakpoints.up('md')]: {
+			margin: "0px",
+    },
+	},
+	buttonFBDisabled: {
+		backgroundColor: '#333 !important',
+    color: '#777 !important',
+		[theme.breakpoints.down('sm')]: {
+      marginLeft: "16px",
+			borderRadius: "4px",
+    },
+	},
 }));
 
 
@@ -85,50 +97,63 @@ const allEvents = [
 		type: "Heat",
 		date: moment('09 Jul 2021 19:30:00'),
 		city: 'Dunedin',
-		tickets: 'google.com',
-		fbevent: 'facebook.com'
+		tickets: '',
+		fbevent: ''
 	},
 	{
 		type: "Heat",
 		date: moment('17 Jul 2021 19:30:00'),
 		city: 'Dunedin',
-		tickets: 'google.com',
-		fbevent: 'facebook.com'},
+		tickets: '',
+		fbevent: ''
+	},
 	{
 		type: "Heat",
 		date: moment('20 Jul 2021 19:30:00'),
 		city: 'Queenstown',
-		tickets: 'google.com',
-		fbevent: 'facebook.com'},
+		tickets: '',
+		fbevent: ''
+	},
 	{
 		type: "Heat",
 		date: moment('21 Jul 2021 19:30:00'),
 		city: 'Wānaka',
-		tickets: 'google.com',
-		fbevent:'facebook.com'},
+		tickets: '',
+		fbevent:''
+	},
 	{
 		type: "Heat",
 		date: moment('28 Jul 2021 19:30:00'),
 		city: 'Invercargill',
-		tickets: 'google.com',
-		fbevent: 'facebook.com'},
+		tickets: '',
+		fbevent: ''
+	},
+	{
+		type: "Heat",
+		date: moment('30 Jul 2021 19:30:00'),
+		city: 'Clyde',
+		tickets: '',
+		fbevent: ''
+	},
 	{
 		type: "Semi Final",
 		date: moment('31 Jul 2021 19:30:00'),
-		city: 'Dunedin', tickets: 'google.com',
-		fbevent: 'facebook.com'},
+		city: 'Dunedin', tickets: '',
+		fbevent: ''
+	},
 	{
 		type: "Semi Final",
 		date: moment('07 Aug 2021 19:30:00'),
 		city: 'Wānaka',
-		tickets: 'google.com',
-		fbevent: 'facebook.com'},
+		tickets: '',
+		fbevent: ''
+	},
 	{
 		type: "Regional Final",
 		date: moment('21 Aug 2021 19:30:00'),
 		city: 'Queenstown',
-		tickets: 'google.com',
-		fbevent: 'facebook.com'
+		tickets: '',
+		fbevent: ''
 	}
   ];
 
@@ -159,9 +184,12 @@ const Tickets = () => {
 						
 						<div className={classes.flexCell} >
 							<Button
+								disabled={row.tickets === ''}
+								// classes={{ disabled: classes.disabledButton }}
+							 	href={row.tickets}
 								variant="contained"
 								color="primary"
-								className={classes.buttonTickets}
+								className={row.tickets !== '' ? classes.buttonTickets : classes.buttonTicketsDisabled}
 								startIcon={<ConfirmationNumberIcon />}
 							>
 								{xsView ? 'TIX' : 'Tickets'}
@@ -169,10 +197,25 @@ const Tickets = () => {
 						</div>
 
 						{xsView ? (
-							<IconButton className={classes.buttonFB} style={{padding:"6px"}}><FacebookIcon /></IconButton>
+								<IconButton
+									disabled={row.fbevent === ''}
+									// classes={{ disabled: classes.disabledButton }}
+									href={row.fbevent}
+									className={row.fbevent !== '' ? classes.buttonFB : classes.buttonFBDisabled}
+									style={{padding:"6px"}}>
+									<FacebookIcon />
+								</IconButton>
 								) : (
 							<div className={classes.flexCell} >
-								<Button variant="contained" className={classes.buttonFB} startIcon={<FacebookIcon />}>Event</Button>
+									<Button
+										disabled={row.fbevent === ''}
+										// classes={{ disabled: classes.disabledButton }}
+										href={row.fbevent}
+										variant="contained"
+										className={row.fbevent !== '' ? classes.buttonFB : classes.buttonFBDisabled}
+										startIcon={<FacebookIcon />}>
+										Event
+									</Button>
 							</div>
 							)
 						}
@@ -186,6 +229,7 @@ const Tickets = () => {
 		<div className={classes.root} >
 			<div>
 				<Typography className={classes.title} align="center" variant="h3">Tickets Lower South Island</Typography>
+				<Typography align="center" variant="body2">Tickets not yet on sale, check back soon.</Typography>
 			</div>
 			<div>
 				<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
