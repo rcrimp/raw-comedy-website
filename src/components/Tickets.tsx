@@ -229,7 +229,7 @@ const Tickets = () => {
 		<div className={classes.root} >
 			<div>
 				<Typography className={classes.title} align="center" variant="h3">Tickets Lower South Island</Typography>
-				<Typography align="center" variant="body2">Tickets not yet on sale, check back soon.</Typography>
+				<Typography align="center" variant="body2">Dates unconfirmed and subject to change. Tickets not yet on sale, check back soon.</Typography>
 			</div>
 			<div>
 				<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
