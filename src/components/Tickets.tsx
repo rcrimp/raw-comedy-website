@@ -138,7 +138,8 @@ const allEvents = [
 	{
 		type: "Semi Final",
 		date: moment('31 Jul 2021 19:30:00'),
-		city: 'Dunedin', tickets: '',
+		city: 'Dunedin',
+		tickets: 'https://www.trybooking.co.nz/HON',
 		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
