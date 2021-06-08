@@ -87,7 +87,7 @@ const About = () => {
 				<Typography variant="body1" paragraph={true}>
 					Every year hundreds of funny folk from across the nation sign up for their time in the spotlight as part of The RAW Comedy Quest, the country’s largest and most prestigious open mic comedy compeititon.
 
-					Now we want you! All you need is five minutes of original material and the glory could be yours… get through the heats and finals and you could be the New Zealand's next star comedian.
+					Now we want you! All you need is five minutes of original material and the glory could be yours… get through the heats and finals and you could be New Zealand's next star comedian.
 				</Typography>
 				<Typography variant="body1" paragraph={true}>
 					The Lower South Island is accepting sign ups from the Otago and Southland regions, who will compete for an all-inclusive trip to the Grand National Final in Auckland.

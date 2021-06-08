@@ -96,9 +96,9 @@ const SignupForms = () => {
 					<List className={classes.list} dense={true}>
 						{generateListItem("Must be a New Zealand Citizen or Permanent Resident (or working towards residency).")}
 						{generateListItem("You cannot enter in different regions in the same year.")}
-						{generateListItem("If you've been a National Finalist, or twice Regional Finalist, you can't enter again.")}
+						{generateListItem("If you've been a National Finalist you can't enter again.")}
 						{generateListItem("If you've competed before you may enter again, but up to a maximum of 3 different years.")}
-						{generateListItem("You must be a first timer or amateur. That is, you can not have earned more than $500 from performing live comedy, as of 1 January 2021.")}
+						{/* {generateListItem("You must be a first timer or amateur. That is, you can not have earned more than $500 from performing live comedy, as of 1 January 2021.")} */}
           </List>
 					<Typography className={classes.text} variant="body2">
 						For rule clarifications or special exemptions email us at <a className={classes.link} href="mailto:remarkablyfunny@gmail.com">remarkablyfunny@gmail.com</a>
@@ -111,7 +111,7 @@ const SignupForms = () => {
 					</div>
 					<List className={classes.list} dense={true}>
 						{generateListItem("Solo, group, stand-up, music, sketch... all forms of live comedy are welcome.")}
-						{generateListItem("Your performance must be no longer than 5 - F I V E - minutes.")}
+						{generateListItem("Your performance must be no longer than 6 - S I X - minutes.")}
 						{generateListItem("Your material must be original.")}
           </List>
 				</div>
