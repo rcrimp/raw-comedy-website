@@ -97,63 +97,63 @@ const allEvents = [
 		type: "Heat",
 		date: moment('09 Jul 2021 19:30:00'),
 		city: 'Dunedin',
-		tickets: '',
-		fbevent: ''
+		tickets: 'https://www.trybooking.co.nz/HOM',
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Heat",
 		date: moment('17 Jul 2021 19:30:00'),
 		city: 'Dunedin',
-		tickets: '',
-		fbevent: ''
+		tickets: 'https://www.trybooking.co.nz/HOM',
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Heat",
 		date: moment('20 Jul 2021 19:30:00'),
 		city: 'Queenstown',
 		tickets: '',
-		fbevent: ''
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Heat",
 		date: moment('21 Jul 2021 19:30:00'),
 		city: 'Wānaka',
 		tickets: '',
-		fbevent:''
+		fbevent:'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Heat",
 		date: moment('28 Jul 2021 19:30:00'),
 		city: 'Invercargill',
 		tickets: '',
-		fbevent: ''
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Heat",
 		date: moment('30 Jul 2021 19:30:00'),
 		city: 'Clyde',
 		tickets: '',
-		fbevent: ''
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Semi Final",
 		date: moment('31 Jul 2021 19:30:00'),
 		city: 'Dunedin', tickets: '',
-		fbevent: ''
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Semi Final",
 		date: moment('07 Aug 2021 19:30:00'),
 		city: 'Wānaka',
 		tickets: '',
-		fbevent: ''
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	},
 	{
 		type: "Regional Final",
 		date: moment('21 Aug 2021 19:30:00'),
 		city: 'Queenstown',
 		tickets: '',
-		fbevent: ''
+		fbevent: 'https://www.facebook.com/events/920435688523832'
 	}
   ];
 
@@ -229,7 +229,7 @@ const Tickets = () => {
 		<div className={classes.root} >
 			<div>
 				<Typography className={classes.title} align="center" variant="h3">Tickets Lower South Island</Typography>
-				<Typography align="center" variant="body2">Dates unconfirmed and subject to change. Tickets not yet on sale, check back soon.</Typography>
+				<Typography align="center" variant="body2">Some dates are unconfirmed and subject to change. Some Tickets not yet on sale, check back soon.</Typography>
 			</div>
 			<div>
 				<Typography className={classes.title} align="center" variant="h4">Heats</Typography>
