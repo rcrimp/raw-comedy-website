@@ -186,7 +186,8 @@ const Tickets = () => {
 							<Button
 								disabled={row.tickets === ''}
 								// classes={{ disabled: classes.disabledButton }}
-							 	href={row.tickets}
+							 	// href={row.tickets}
+								onClick={() => window.open(row.tickets)}
 								variant="contained"
 								color="primary"
 								className={row.tickets !== '' ? classes.buttonTickets : classes.buttonTicketsDisabled}
@@ -200,7 +201,8 @@ const Tickets = () => {
 								<IconButton
 									disabled={row.fbevent === ''}
 									// classes={{ disabled: classes.disabledButton }}
-									href={row.fbevent}
+									// href={row.fbevent}
+									onClick={() => window.open(row.fbevent)}
 									className={row.fbevent !== '' ? classes.buttonFB : classes.buttonFBDisabled}
 									style={{padding:"6px"}}>
 									<FacebookIcon />
@@ -210,7 +212,8 @@ const Tickets = () => {
 									<Button
 										disabled={row.fbevent === ''}
 										// classes={{ disabled: classes.disabledButton }}
-										href={row.fbevent}
+										// href={row.fbevent}
+										onClick={() => window.open(row.fbevent)}
 										variant="contained"
 										className={row.fbevent !== '' ? classes.buttonFB : classes.buttonFBDisabled}
 										startIcon={<FacebookIcon />}>
