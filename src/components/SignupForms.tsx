@@ -95,6 +95,7 @@ const SignupForms = () => {
 					</div>
 					<List className={classes.list} dense={true}>
 						{generateListItem("Must be a New Zealand Citizen or Permanent Resident (or working towards residency).")}
+						{generateListItem("You must be an amateur. You cannot be paid regularly to perform comedy.")}
 						{generateListItem("You cannot enter in different regions in the same year.")}
 						{generateListItem("If you've been a National Finalist you can't enter again.")}
 						{generateListItem("If you've competed before you may enter again, but up to a maximum of 3 different years.")}
