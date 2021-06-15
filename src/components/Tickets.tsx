@@ -102,6 +102,13 @@ const allEvents = [
 	},
 	{
 		type: "Heat",
+		date: moment('10 Jul 2021 19:30:00'),
+		city: 'Dunedin',
+		tickets: 'https://www.trybooking.co.nz/HOM',
+		fbevent: 'https://www.facebook.com/events/920435688523832'
+	},
+	{
+		type: "Heat",
 		date: moment('17 Jul 2021 19:30:00'),
 		city: 'Dunedin',
 		tickets: 'https://www.trybooking.co.nz/HOM',
