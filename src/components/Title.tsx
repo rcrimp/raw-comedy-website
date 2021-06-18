@@ -1,31 +1,10 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-
-import { Typography } from '@material-ui/core';
-import { Parallax } from 'react-scroll-parallax';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-// aspectRatio={635/194}
-
-import RAWlogo from "../images/RAW.png";
-// import curtainBackground from "../images/curtain-HD.jpg";
-
-// import seats1 from "../images/theatre-seats/001.png";
-// import seats2 from "../images/theatre-seats/002.png";
-import seats3 from "../images/theatre-seats/003.png";
-import seats4 from "../images/theatre-seats/004.png";
-import seats5 from "../images/theatre-seats/005.png";
-import seats6 from "../images/theatre-seats/006.png";
-import seats7 from "../images/theatre-seats/007.png";
-import seats8 from "../images/theatre-seats/008.png";
-import mdSeats from "../images/theatre-seats/md-03-08.png"
-
 import YouTube from 'react-youtube';
-import { callbackify } from 'util';
+import Vimeo from '@u-wave/react-vimeo';
 
-const curtainBackground = "https://live.staticflickr.com/65535/51189156798_46c0c5f9e7_k.jpg";
-
-const shadowSettings = '0 2px 10px #000000BB'
+import curtainBackground from "../images/curtain-HD.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -33,149 +12,60 @@ const useStyles = makeStyles((theme) => ({
 		display: "inline-block",
 		height: "100%",
 		width: "100%",
-	},
-	bgimg: {
-		height: "100%",
-		width: "100%",
-		objectFit: "fill",
-	},
-	textContainer: {
-		width: "100%", //rawLogoDimendsions.w,
-		// backgroundColor: "rgba(0, 0, 0, 0.5)",
 		color: "white",
-		position: "absolute",
-		top: 0,
-		bottom: 0,
-		left: 0,
-		right: 0,
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "center",
-		alignContent: "center",
-		[theme.breakpoints.down('sm')]: {
-			paddingBottom: "20vw",
-		},
 	},
 	videoWrapper: {
-		// float: "none",
-        // clear: "both",
-        width: "100%",
-		maxWidth: "100%",
-		position: "absolute",
+		// backgroundImage: "url(../images/curtain-HD.jpg)",
+		// background: "red",
 		top: 0,
 		bottom: 0,
-        paddingBottom: `${9.0/16.0}%`,
-		
-        height: "0",
-        margin: "0 auto",
-        
-		paddingLeft: "calc( (100vw - (100vh - 128px) * (16.0/9.0)) / 2)",
-		paddingTop: "64px",
+		paddingBottom: 0, //"56.25%", /* 16:9 */
+		height: 0,
+		width: "100%",
+		"& iframe, & embed, & object": {
+			backgroundColor: "transparent",
+			width: "75vw",
+			height: "calc(75vw * 9/16)",
+			paddingLeft: 0,
+			margin: 0,
+			[theme.breakpoints.down('sm')]: {
+				width: "96vw",
+				height: "calc(99vw * 9/16)",
+			},
+		},
+		[theme.breakpoints.up('md')]: {
+			paddingLeft: "12vw",
+			paddingTop: "64px",
+		},
 		[theme.breakpoints.down('sm')]: {
-        	paddingTop: "56px",
-			paddingLeft: "0px",
+			paddingTop: "56px",
 		},
 	},
-	rawLogo: {
-		width: "50%",
-		display: "block",
-		marginLeft: "auto",
-		marginRight: "auto",
-		filter: `drop-shadow(${shadowSettings})`,
-	},
-	textTop: {
-		textAlign: "center",
-		fontSize: "4.1vw",
-		margin: "auto",
-		marginBottom: 8,
-		textShadow: shadowSettings,
-	},
-	textBottom: {
-		textAlign: "center",
-		fontSize: "4.4vw",
-		margin: "auto",
-		marginTop: 8,
-		textShadow: shadowSettings,
-	},
-	seatsContainer: {
-		position: "absolute",
-		width: "100%",
-	},
-	seats: {
-		// position: "absolute",
-		width: "100%",
-		minHeight: "50vh",
-		// margin: "auto",
-		filter: `drop-shadow(0 0 10px #000000BB)`,
-		objectFit: "cover",
-	},
-	mobileSeats: {
-		position: "absolute",
-		top: '65vw',
-		left: 0,
-		width: "100%",
-		// objectFit: "cover",
-	},
-	mobileSeatsSpacing: {
-		display: "block",
-		height: "20vw",
+	videoHeight: {
+		height: "calc(75vw * 9/16)",
+		marginTop: "128px",
+		[theme.breakpoints.down('sm')]: {
+			marginTop: "56px",
+		},
 	},
 }));
 
 const Title = (props: any) => {
 	const classes = useStyles();
 	const theme = useTheme();
-	const mobileView = useMediaQuery(theme.breakpoints.down("sm"));
-	// const mobileChairs = useMediaQuery(theme.breakpoints.down("xs"));
-	
-	let seats;
-	if (mobileView) {
-		seats = (
-		<>
-			<LazyLoadImage className={classes.mobileSeats} src={mdSeats} />
-			<div className={classes.mobileSeatsSpacing}/>	
-		</>
-		);
-	} else {
-		seats = [seats3, seats4, seats5, seats6, seats7, seats8].map((row: any, i: number) => (
-			<div key={`seatRow${i}`} className={classes.seatsContainer} >
-				<Parallax y={[-20 + Math.pow(2, i+2.5), - Math.pow(2, i+2)]} >
-					<LazyLoadImage className={classes.seats} src={row} />
-				</Parallax>
-			</div>
-		))
-	}
-
-	// const { innerWidth: width, innerHeight: height } = window;
-	const mobilePadding = 0;
-	const desktopPadding = 64;
-	const videoAspect = 9.0 / 16.0;
-
-	const opts = {
-		height: "100px",
-		width: "100px"
-	};
-
-	const paddedWidth = window.innerWidth - (mobileView ? (mobilePadding * 2) : (desktopPadding * 2));
-	if ((paddedWidth * videoAspect) < window.innerHeight) {
-		opts.height = `${Math.floor(paddedWidth * videoAspect)}px`;
-		opts.width = `${paddedWidth}px`;
-	} else { // super wide screen sizes
-		const paddedHeight = window.innerHeight - (desktopPadding * 2);
-		opts.height = `${paddedHeight}px`;
-		opts.width = `${Math.floor(paddedHeight * (1.0/videoAspect))}px`
-	}
 
 	return (
 		<div className={classes.root} >
-			<LazyLoadImage className={classes.bgimg} src={curtainBackground} />
 			<div className={classes.videoWrapper}>
-				<YouTube
+				{/* <YouTube
 					videoId={'5QM4lT5QGas'}                  // defaults -> null
 					// id={string}                       // defaults -> null
 					// className={string}                // defaults -> null
 					// containerClassName={string}       // defaults -> ''
-					opts={opts}                        // defaults -> {}
+					opts={{
+						height: "560",
+						width: "349"
+					}}                        // defaults -> {}
 					// onReady={func}                    // defaults -> noop
 					// onPlay={func}                     // defaults -> noop
 					// onPause={func}                    // defaults -> noop
@@ -184,18 +74,17 @@ const Title = (props: any) => {
 					// onStateChange={func}              // defaults -> noop
 					// onPlaybackRateChange={func}       // defaults -> noop
 					// onPlaybackQualityChange={func}    // defaults -> noop
+				/> */}
+				<Vimeo
+					video="564619870"
+					autoplay
+					showPortrait
+					showTitle
+					showByline
+					
 				/>
-				{/* <Typography className={classes.textTop} variant="h1">LOWER SOUTH ISLAND</Typography>
-				<LazyLoadImage
-					className={classes.rawLogo}
-					src={RAWlogo}
-					// width={rawLogoDimendsions.w}
-					// height={rawLogoDimendsions.h}
-					alt="RAW logo"
-				/>
-				<Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography> */}
 			</div>
-			{seats}
+			{/* <div className={classes.videoHeight}></div> */}
 		</div>
 	);
 }

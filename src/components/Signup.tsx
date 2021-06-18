@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
 		minHeight: "100%",
 		width: "100%",
 		paddingTop: "64px",
+		[theme.breakpoints.down('sm')]: {
+			margpaddingTopinTop: "56px",
+		},
 	},
 	bgimg: {
 		height: "100%",
