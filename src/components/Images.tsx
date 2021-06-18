@@ -60,7 +60,7 @@ const Images = () => {
 			label: 'Hamish Mabon-Ross',
 		},
 		{
-			url: 'https://live.staticflickr.com/65535/51189156258_a1a56427ce_h.jpg',
+			url: 'https://live.staticflickr.com/65535/51247253760_a26bdf89ce_h.jpg', // 'https://live.staticflickr.com/65535/51189156258_a1a56427ce_h.jpg',
 			label: 'Maggie Rogers',
 		},
 		{
