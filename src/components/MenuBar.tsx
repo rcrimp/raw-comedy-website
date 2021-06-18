@@ -40,13 +40,12 @@ const MenuBar = () => {
 
 	return (
 		<div className={classes.root}>
-      <AppBar className={classes.appBar} color={'transparent'} elevation={0} position="fixed">
-        <Toolbar>
-          <Typography color={"primary"} variant="h6" className={classes.title}></Typography>
-					
+			<AppBar className={classes.appBar} color={'transparent'} elevation={0} position="fixed">
+				<Toolbar>
+					<Typography color={"primary"} variant="h6" className={classes.title}></Typography>
 					<div className={classes.buttonContainer}>
 						<HashLink className={classes.link} smooth to="/#home">
-							<Button size='large' className={classes.button} color="secondary">TOP</Button>
+							<Button size='large' className={classes.button} color="secondary">VIDEO</Button>
 						</HashLink>
 						
 						<HashLink className={classes.link} smooth to="/#about">
@@ -61,10 +60,9 @@ const MenuBar = () => {
 							<Button size='large' className={classes.button} color="secondary">Tickets</Button>
 						</HashLink>
 					</div>
-
-        </Toolbar>
-      </AppBar>
-    </div>
+				</Toolbar>
+			</AppBar>
+		</div>
 	);
 }
 

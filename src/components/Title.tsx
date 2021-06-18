@@ -20,6 +20,9 @@ import seats7 from "../images/theatre-seats/007.png";
 import seats8 from "../images/theatre-seats/008.png";
 import mdSeats from "../images/theatre-seats/md-03-08.png"
 
+import YouTube from 'react-youtube';
+import { callbackify } from 'util';
+
 const curtainBackground = "https://live.staticflickr.com/65535/51189156798_46c0c5f9e7_k.jpg";
 
 const shadowSettings = '0 2px 10px #000000BB'
@@ -40,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
 		width: "100%", //rawLogoDimendsions.w,
 		// backgroundColor: "rgba(0, 0, 0, 0.5)",
 		color: "white",
-   	position: "absolute",
+		position: "absolute",
 		top: 0,
-    bottom: 0,
+		bottom: 0,
 		left: 0,
 		right: 0,
 		display: "flex",
@@ -50,8 +53,28 @@ const useStyles = makeStyles((theme) => ({
 		justifyContent: "center",
 		alignContent: "center",
 		[theme.breakpoints.down('sm')]: {
-      paddingBottom: "20vw",
-    },
+			paddingBottom: "20vw",
+		},
+	},
+	videoWrapper: {
+		// float: "none",
+        // clear: "both",
+        width: "100%",
+		maxWidth: "100%",
+		position: "absolute",
+		top: 0,
+		bottom: 0,
+        paddingBottom: `${9.0/16.0}%`,
+		
+        height: "0",
+        margin: "0 auto",
+        
+		paddingLeft: "calc( (100vw - (100vh - 128px) * (16.0/9.0)) / 2)",
+		paddingTop: "64px",
+		[theme.breakpoints.down('sm')]: {
+        	paddingTop: "56px",
+			paddingLeft: "0px",
+		},
 	},
 	rawLogo: {
 		width: "50%",
@@ -88,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	mobileSeats: {
 		position: "absolute",
-		top: '60vw',
+		top: '65vw',
 		left: 0,
 		width: "100%",
 		// objectFit: "cover",
@@ -106,8 +129,6 @@ const Title = (props: any) => {
 	// const mobileChairs = useMediaQuery(theme.breakpoints.down("xs"));
 	
 	let seats;
-
-
 	if (mobileView) {
 		seats = (
 		<>
@@ -125,11 +146,46 @@ const Title = (props: any) => {
 		))
 	}
 
+	// const { innerWidth: width, innerHeight: height } = window;
+	const mobilePadding = 0;
+	const desktopPadding = 64;
+	const videoAspect = 9.0 / 16.0;
+
+	const opts = {
+		height: "100px",
+		width: "100px"
+	};
+
+	const paddedWidth = window.innerWidth - (mobileView ? (mobilePadding * 2) : (desktopPadding * 2));
+	if ((paddedWidth * videoAspect) < window.innerHeight) {
+		opts.height = `${Math.floor(paddedWidth * videoAspect)}px`;
+		opts.width = `${paddedWidth}px`;
+	} else { // super wide screen sizes
+		const paddedHeight = window.innerHeight - (desktopPadding * 2);
+		opts.height = `${paddedHeight}px`;
+		opts.width = `${Math.floor(paddedHeight * (1.0/videoAspect))}px`
+	}
+
 	return (
 		<div className={classes.root} >
 			<LazyLoadImage className={classes.bgimg} src={curtainBackground} />
-			<div className={classes.textContainer}>
-				<Typography className={classes.textTop} variant="h1">LOWER SOUTH ISLAND</Typography>
+			<div className={classes.videoWrapper}>
+				<YouTube
+					videoId={'5QM4lT5QGas'}                  // defaults -> null
+					// id={string}                       // defaults -> null
+					// className={string}                // defaults -> null
+					// containerClassName={string}       // defaults -> ''
+					opts={opts}                        // defaults -> {}
+					// onReady={func}                    // defaults -> noop
+					// onPlay={func}                     // defaults -> noop
+					// onPause={func}                    // defaults -> noop
+					// onEnd={func}                      // defaults -> noop
+					// onError={func}                    // defaults -> noop
+					// onStateChange={func}              // defaults -> noop
+					// onPlaybackRateChange={func}       // defaults -> noop
+					// onPlaybackQualityChange={func}    // defaults -> noop
+				/>
+				{/* <Typography className={classes.textTop} variant="h1">LOWER SOUTH ISLAND</Typography>
 				<LazyLoadImage
 					className={classes.rawLogo}
 					src={RAWlogo}
@@ -137,7 +193,7 @@ const Title = (props: any) => {
 					// height={rawLogoDimendsions.h}
 					alt="RAW logo"
 				/>
-				<Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography>
+				<Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography> */}
 			</div>
 			{seats}
 		</div>
