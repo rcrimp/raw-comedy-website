@@ -102,7 +102,7 @@ const SignupForms = () => {
 						{/* {generateListItem("You must be a first timer or amateur. That is, you can not have earned more than $500 from performing live comedy, as of 1 January 2021.")} */}
           </List>
 					<Typography className={classes.text} variant="body2">
-						For rule clarifications or special exemptions email us at <a className={classes.link} href="mailto:remarkablyfunny@gmail.com">remarkablyfunny@gmail.com</a>
+						For rule clarifications or special exemptions email us at <a className={classes.link} href="mailto:hello@dunedincomedy.co.nz">hello@dunedincomedy.co.nz</a>
 					</Typography>
 				</div>
 				
@@ -123,6 +123,7 @@ const SignupForms = () => {
 						<Typography className={classes.text} variant="body1">Heats in Dunedin, Queenstown, Invercargill, Wānaka, and Clyde.</Typography>
 						<Typography className={classes.text} variant="body1">If you live elsewhere you may still compete if you are prepared to travel.</Typography>
 						<Typography className={classes.text} variant="body1">You must also be prepared to travel for the semis/finals, there is funding available for travel grants.</Typography>
+						<Typography className={classes.text} style={{color: "yellow"}} variant="body1">Dunedin Heats are now full.</Typography>
 						<div className={classes.buttonContainer}>
 							<Button className={classes.button} href="https://timmuller.typeform.com/to/pKgqvp" color="primary" size="large" variant="contained" >Sign Up Form</Button>
 						</div>
