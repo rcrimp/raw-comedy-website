@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 // import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import YouTube from 'react-youtube';
 import Vimeo from '@u-wave/react-vimeo';
