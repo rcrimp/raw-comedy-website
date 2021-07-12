@@ -132,8 +132,8 @@ const allEvents = [
 		type: "Heat",
 		date: moment('28 Jul 2021 19:30:00'),
 		city: 'Invercargill',
-		tickets: '',
-		fbevent: 'https://www.facebook.com/events/920435688523832'
+		tickets: 'https://www.trybooking.co.nz/HXL',
+		fbevent: 'https://www.facebook.com/events/1194597587667845'
 	},
 	{
 		type: "Heat",

@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+	  color: "white",
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -17,21 +18,22 @@ const useStyles = makeStyles((theme: Theme) =>
     title: {
       flexGrow: 1,
     },
-		link: {
-			textDecoration: 'none !important',
-		},
-		buttonContainer: {
-			// width: "400px",
-			display: "flex",
-			flexDirection: "row",
-			justifyContent: "space-between",
-		},
-		button: {
-			// color: '#FFFFFF',
-		},
-		appBar: {
-			backgroundImage: 'linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.8))',
-		},
+	link: {
+		textDecoration: 'none !important',
+	},
+	buttonContainer: {
+		// width: "400px",
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
+	},
+	button: {
+		// color: '#FFFFFF',
+	},
+	appBar: {
+		backgroundColor: "rgba(0, 0, 0, 0.9)"
+		// backgroundImage: 'linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.8))',
+	},
   }),
 );
 
@@ -40,31 +42,34 @@ const MenuBar = () => {
 
 	return (
 		<div className={classes.root}>
-      <AppBar className={classes.appBar} color={'transparent'} elevation={0} position="fixed">
-        <Toolbar>
-          <Typography color={"primary"} variant="h6" className={classes.title}></Typography>
-					
+			<AppBar className={classes.appBar} color={'transparent'} elevation={0} position="fixed">
+				<Toolbar>
+					<Typography variant="h6" className={classes.title}></Typography>
 					<div className={classes.buttonContainer}>
-						<HashLink className={classes.link} smooth to="/#home">
-							<Button size='large' className={classes.button} color="secondary">TOP</Button>
-						</HashLink>
 						
 						<HashLink className={classes.link} smooth to="/#about">
-							<Button size='large' className={classes.button} color="secondary">About</Button>
+							<Button size='medium' className={classes.button} color="secondary">About</Button>
 						</HashLink>
 						
 						<HashLink className={classes.link} smooth to="/#compete">
-							<Button size='large' className={classes.button} color="secondary">Compete</Button>
+							<Button size='medium' className={classes.button} color="secondary">Enter</Button>
 						</HashLink>
 						
 						<HashLink className={classes.link} smooth to="/#tickets">
-							<Button size='large' className={classes.button} color="secondary">Tickets</Button>
+							<Button size='medium' className={classes.button} color="secondary">Tickets</Button>
+						</HashLink>
+
+						<HashLink className={classes.link} smooth to="/#gallery">
+							<Button size='medium' className={classes.button} color="secondary">Gallery</Button>
+						</HashLink>
+
+						<HashLink className={classes.link} smooth to="/#home">
+							<Button size='medium' className={classes.button} color="secondary">VIDEO</Button>
 						</HashLink>
 					</div>
-
-        </Toolbar>
-      </AppBar>
-    </div>
+				</Toolbar>
+			</AppBar>
+		</div>
 	);
 }
 

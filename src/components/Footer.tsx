@@ -66,7 +66,7 @@ const Tickets = () => {
 					<Typography className={classes.producerText} variant="body1">Remarkably Funny</Typography>
 				</a>
 			</div>
-			<Typography className={classes.producerText} variant="body2">Website by <a href="mailto:reuben@dunedincomedy.co.nz">Reuben Crisp</a></Typography>
+			{/* <Typography className={classes.producerText} variant="body2">Website by <a href="mailto:reuben@dunedincomedy.co.nz">Reuben Crisp</a></Typography> */}
 		</div>
 
 	);

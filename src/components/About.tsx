@@ -3,29 +3,33 @@ import { makeStyles } from '@material-ui/core/styles';
 import { HashLink  } from 'react-router-hash-link';
 import { Typography, Button } from '@material-ui/core';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import RAWlogo from "../images/RAW.png";
+
+const shadowSettings = '0 2px 10px #000000BB'
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 		position: "relative",
-		// display: "inline-block",
 		height: "100%",
 		width: "100%",
-		display: "flex",
-		backgroundImage: `linear-gradient(0deg, black 50%, transparent)`,
-		paddingTop: "64px",
+		display: "inline-block",
+		color: "white",
+		marginTop: "64px",
+		[theme.breakpoints.down('sm')]: {
+			marginTop: "56px",
+		},
 	},
 	textContainer: {
-		// position: "absolute",
 		top: 0,
 		bottom: 0,
 		left: 0,
 		right: 0,
-		// padding: "10% 10% 10% 10%",
 		maxWidth: "960px",
 		padding: '0 16px',
 		marginLeft: "auto",
 		marginRight: "auto",
 		[theme.breakpoints.up('md')]: {
-      marginTop: "200px",
     },
 		color: "white",
 		display: "flex",
@@ -45,10 +49,10 @@ const useStyles = makeStyles((theme) => ({
 		minWidth: "300px",
 		margin: "0 16px 16px 0",
 		backgroundColor: '#B71C1C',
-    color: '#fff',
-    '&:hover': {
-      backgroundColor: '#fff',
-      color: '#B71C1C',
+		color: '#fff',
+		'&:hover': {
+			backgroundColor: '#fff',
+			color: '#B71C1C',
 		},
 	},
 	link: {
@@ -56,19 +60,40 @@ const useStyles = makeStyles((theme) => ({
 	},
 	title: {
 		[theme.breakpoints.up('md')]: {
-      fontSize: "4vw",
-    },
+      		fontSize: "4vw",
+    	},
 		[theme.breakpoints.down('sm')]: {
-      fontSize: "7.2vw",
-    },
+      		fontSize: "7.2vw",
+    	},
 	},
 	subtitle: {
 		[theme.breakpoints.up('md')]: {
-      fontSize: "2vw",
-    },
+			fontSize: "2vw",
+		},
 		[theme.breakpoints.down('sm')]: {
-      fontSize: "3.7vw",
-    },
+			fontSize: "3.7vw",
+		},
+	},
+	rawLogo: {
+		width: "50%",
+		display: "block",
+		marginLeft: "auto",
+		marginRight: "auto",
+		filter: `drop-shadow(${shadowSettings})`,
+	},
+	textTop: {
+		textAlign: "center",
+		fontSize: "4.1vw",
+		margin: "auto",
+		marginBottom: 8,
+		textShadow: shadowSettings,
+	},
+	textBottom: {
+		textAlign: "center",
+		fontSize: "4.4vw",
+		margin: "auto",
+		marginTop: 8,
+		textShadow: shadowSettings,
 	},
 }));
 
@@ -77,6 +102,15 @@ const About = () => {
 
 	return (
 		<div className={classes.root}>
+			{/* <Typography className={classes.textTop} variant="h1">LOWER SOUTH ISLAND</Typography> */}
+			{/* <LazyLoadImage
+				className={classes.rawLogo}
+				src={RAWlogo}
+				// width={rawLogoDimendsions.w}
+				// height={rawLogoDimendsions.h}
+				alt="RAW logo"
+			/> */}
+			{/* <Typography className={classes.textBottom} variant="h1">COMEDY QUEST 2021</Typography> */}
 			<div className={classes.textContainer}>
 				
 				<Typography className={classes.title} align='center' variant="h3">The RAW Comedy Quest</Typography>
