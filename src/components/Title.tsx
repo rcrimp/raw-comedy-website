@@ -77,7 +77,7 @@ const Title = (props: any) => {
 				/> */}
 				<Vimeo
 					video="564619870"
-					autoplay
+					autoplay={false}
 					showPortrait
 					showTitle
 					showByline
