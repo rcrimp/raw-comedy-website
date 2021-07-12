@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { HashLink  } from 'react-router-hash-link';
 import { Typography, Button } from '@material-ui/core';
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import RAWlogo from "../images/RAW.png";
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import RAWlogo from "../images/RAW.png";
 
 const shadowSettings = '0 2px 10px #000000BB'
 

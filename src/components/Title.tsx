@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import YouTube from 'react-youtube';
+// import useMediaQuery from "@material-ui/core/useMediaQuery";
+// import YouTube from 'react-youtube';
 import Vimeo from '@u-wave/react-vimeo';
 
-import curtainBackground from "../images/curtain-HD.jpg";
+// import curtainBackground from "../images/curtain-HD.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Title = (props: any) => {
 	const classes = useStyles();
-	const theme = useTheme();
+	// const theme = useTheme();
 
 	return (
 		<div className={classes.root} >
