@@ -119,14 +119,14 @@ const allEvents = [
 		date: moment('20 Jul 2021 19:30:00'),
 		city: 'Queenstown',
 		tickets: 'https://www.trybooking.co.nz/HNP',
-		fbevent: 'https://www.facebook.com/events/920435688523832'
+		fbevent: 'https://www.facebook.com/events/198775508845108'
 	},
 	{
 		type: "Heat",
 		date: moment('21 Jul 2021 20:30:00'),
 		city: 'Wānaka',
 		tickets: 'https://www.trybooking.com/nz/events/landing/5116',
-		fbevent:'https://www.facebook.com/events/920435688523832'
+		fbevent:'https://www.facebook.com/events/792686671423028/'
 	},
 	{
 		type: "Heat",
@@ -140,7 +140,7 @@ const allEvents = [
 		date: moment('30 Jul 2021 20:30:00'),
 		city: 'Clyde',
 		tickets: 'https://www.trybooking.com/nz/events/landing/5117',
-		fbevent: 'https://www.facebook.com/events/920435688523832'
+		fbevent: 'https://www.facebook.com/events/511294513415074'
 	},
 	{
 		type: "Semi Final",
