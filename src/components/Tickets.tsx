@@ -154,14 +154,14 @@ const allEvents = [
 		date: moment('07 Aug 2021 19:30:00'),
 		city: 'Wānaka',
 		tickets: 'https://www.trybooking.com/nz/events/landing?eid=5118',
-		fbevent: 'https://www.facebook.com/events/920435688523832'
+		fbevent: 'https://www.facebook.com/events/1421593741573362'
 	},
 	{
 		type: "Regional Final",
 		date: moment('21 Aug 2021 19:30:00'),
 		city: 'Queenstown',
 		tickets: 'https://www.trybooking.com/nz/events/landing/5119',
-		fbevent: 'https://www.facebook.com/events/920435688523832'
+		fbevent: 'https://www.facebook.com/events/140348374900391'
 	}
   ];
 
