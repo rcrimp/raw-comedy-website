@@ -32,7 +32,7 @@ const Images = () => {
 		// 	label: 'The New Athenaum Theatre with the audience sitting in patient anticipation.',
 		// },
 		{
-			url: 'https://live.staticflickr.com/65535/51189156038_352501cc67_h.jpg',
+			url: 'https://live.staticflickr.com/65535/51247253760_a26bdf89ce_h.jpg',
 			label: 'Applause for the 2020 Winner Maggie Rogers.',
 		},
 		{
